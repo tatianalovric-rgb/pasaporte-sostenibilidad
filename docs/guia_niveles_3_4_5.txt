@@ -1,0 +1,298 @@
+﻿Escala ESG — Niveles 3, 4 y 5
+Guía para instalar la actualización y completar los niveles restantes con la empresa de prueba
+EcoGestión Ambiental del Centro, C.A.
+Todos los datos son inventados.
+Parte 1 — Instalar la actualización
+Esta actualización hace tres cosas:
+Pone tu copia igual a la mía
+, que tiene los seis niveles funcionando. Si en tu computadora el Nivel 3 sale vacío, esto lo corrige.
+Añade el botón «Descargar Word»
+en la pestaña Informe VSME: el informe completo, con tablas, listo para abrir en Word.
+Añade el botón «Datos para bancos (JSON)»
+: el archivo que el Nivel 5 promete para que un banco cargue tus datos en su sistema.
+Tus datos no se borran.
+Paso 1. Descargar
+Descarga el archivo
+actualizacion-niveles-3-5.zip
+. Quedará en tu carpeta
+Descargas
+. No lo abras.
+Paso 2. Pegar este mensaje al ayudante de Antigravity
+En mi carpeta Descargas hay un archivo llamado actualizacion-niveles-3-5.zip.
+Es una versión completa y probada de este proyecto.
+Descomprímelo dentro de la carpeta de este proyecto y reemplaza todos
+los archivos que tengan el mismo nombre. Contiene las carpetas client,
+server y shared, y los archivos package.json, package-lock.json y README.md.
+No borres el archivo data.db: ahí están mis datos.
+No cambies nada más.
+Después ejecuta npm install (hay una pieza nueva para generar Word),
+reinicia la aplicación con npm run dev y avísame cuando esté lista.
+Paso 3. Aceptar y recargar
+Si te pide permiso para reemplazar archivos o para ejecutar
+npm install
+, acéptalo. Luego, en Chrome, pulsa
+F5
+.
+Cómo saber que funcionó
+En
+Ruta de niveles
+, el Nivel 3 tiene el botón
+Trabajar aquí
+.
+Al entrar, ves arriba unas pestañas con
+B2 · B4 · B5
+y, abajo, el botón
+Siguiente bloque
+.
+En
+Informe VSME
+aparece el botón
+Descargar Word
+.
+Parte 2 — Cómo se responde en estos niveles
+Las preguntas de Sí o No.
+Algunos bloques empiezan con una pregunta y dos botones,
+Sí
+y
+No
+. Si respondes
+No
+, el bloque se cierra solo y no te pide nada más. Si respondes
+Sí
+, aparecen las preguntas del bloque.
+Los bloques.
+Cada nivel está dividido en bloques. Arriba ves sus códigos (por ejemplo B2 · B4 · B5) y abajo el botón
+Siguiente bloque
+.
+Las listas desplegables.
+Cuando la tabla dice «Elige», no escribes: pulsas la casilla y eliges esa opción.
+Los números.
+Escríbelos sin puntos de miles, y con punto para los decimales:
+4.6
+, no
+4,6
+.
+En estos niveles ningún dato pide evidencia.
+Parte 3 — Nivel 3: Módulo Básico completado
+Al cerrar este nivel tienes el
+Módulo Básico completo
+, el mínimo que el estándar pide a cualquier empresa no cotizada.
+Bloque B2 — Prácticas, políticas e iniciativas
+Pregunta
+Qué escribes o eliges
+Prácticas y políticas vigentes
+Política ambiental aprobada por la Junta Directiva en 2023. Plan de manejo de desechos peligrosos conforme al Decreto 2.635. Programa de mantenimiento preventivo de la flota para reducir consumo de diésel.
+Certificaciones o sistemas de gestión
+ISO 14001:2015 en implantación; auditoría de certificación prevista para 2027.
+Iniciativas futuras comprometidas
+Sustitución de 2 camiones diésel por unidades a gas natural en 2027. Ampliación de los paneles solares de la planta a 120 MWh/año.
+Fíjate en la certificación: dice «en implantación», no «certificada». La app advierte sobre esto en su consejo: no se describen intenciones como si ya fueran hechos.
+Bloque B4 — Contaminación de aire, agua y suelo
+Pregunta inicial:
+¿Estás obligado a reportar contaminantes a un registro público de emisiones?
+Pulsa
+Sí
+.
+Pregunta
+Qué escribes o eliges
+Contaminantes emitidos al aire
+Partículas totales: 1,8 t. Óxidos de nitrógeno (NOx): 2,4 t. Dióxido de azufre (SO2): 0,6 t. Cloruro de hidrógeno (HCl): 0,3 t. Caracterización según el Decreto 638.
+Contaminantes vertidos al agua
+Demanda química de oxígeno (DQO): 2,1 t. Sólidos suspendidos totales: 1,4 t. Metales pesados totales (Pb, Cd, Hg): 0,02 t. Caracterización según el Decreto 883.
+Contaminantes liberados al suelo
+0 t. No se registraron derrames ni liberaciones al suelo en el período.
+Se responde
+Sí
+porque una empresa que trata desechos peligrosos en Venezuela debe caracterizar sus emisiones y efluentes ante el ministerio con competencia ambiental. Los decretos citados son los de calidad del aire (638) y de vertidos (883).
+Bloque B5 — Biodiversidad
+Pregunta inicial:
+¿Alguna sede se ubica en o cerca de un área sensible en biodiversidad?
+Pulsa
+Sí
+.
+Pregunta
+Qué escribes o eliges
+Sedes en o cerca de áreas sensibles
+Centro de acopio Maracay, en las proximidades del límite sur del Parque Nacional Henri Pittier (Área Bajo Régimen de Administración Especial).
+Uso total del suelo (ha)
+4.6
+Superficie sellada (ha)
+3.1
+Se responde
+Sí
+a propósito, para que veas las preguntas del bloque. En un caso real habría que confirmar la distancia al área protegida con la cartografía oficial de las ABRAE.
+Parte 4 — Nivel 4: Estrategia y clima
+Es el primer nivel del
+Módulo Completo
+(OPCIÓN B). Aquí la empresa explica a qué se dedica y fija sus objetivos climáticos.
+Bloque C1 — Estrategia y modelo de negocio
+Pregunta
+Qué escribes o eliges
+Descripción del modelo de negocio
+Empresa de servicios ambientales que recoge, transporta, trata y dispone desechos peligrosos de clientes industriales, bajo contratos anuales con tarifa por tonelada.
+Grupos significativos de productos y servicios
+Recolección y transporte de desechos peligrosos (45 % de ingresos). Tratamiento y disposición final (40 %). Asesoría en planes de manejo y trámites ambientales (15 %).
+Mercados y grupos de clientes principales
+Industria química, farmacéutica, automotriz y metalmecánica de los estados Carabobo y Aragua. Clientes con matrices multinacionales que exigen trazabilidad ESG a sus proveedores.
+Relaciones clave con grupos de interés
+Clientes industriales, ministerio con competencia ambiental, comunidades vecinas a la planta de Los Guayos, trabajadores y entidades financieras.
+Bloque C2 — Políticas ampliadas
+Pregunta
+Qué escribes o eliges
+Objetivos de las políticas y avance medido
+Reducir 10 % el consumo de diésel por tonelada transportada para 2026 (avance 2025: 4 %). Cero derrames en transporte (cumplido en 2025).
+Nivel de responsabilidad interna
+Gerencia General, con seguimiento trimestral de la Junta Directiva.
+Bloque C3 — Objetivos de reducción de GEI y transición
+Pregunta inicial:
+¿Has establecido objetivos de reducción de GEI?
+Pulsa
+Sí
+.
+Pregunta
+Qué escribes o eliges
+Año base
+2025
+Valor del año base (tCO2e)
+377
+Año objetivo
+2030
+Valor del año objetivo (tCO2e)
+264
+Alcances cubiertos y su cuota
+Alcance 1 y Alcance 2, 100 % de las emisiones, en valores absolutos.
+Acciones principales
+Renovación de la flota con unidades a gas natural, ampliación de la generación solar propia y optimización de rutas de recolección.
+Plan de transición
+Elige
+No adoptado, con fecha prevista
+Detalle del plan o fecha prevista
+Adopción prevista para junio de 2027, con aprobación de la Junta Directiva.
+El Valor del año base no hace falta escribirlo.
+Debajo de esa casilla aparece el botón
+«Usar dato heredado: 377»
+. Púlsalo: la app suma el Alcance 1 (255) y el Alcance 2 (122) que ya declaraste en el Nivel 1. Así el objetivo queda unido a tu inventario real.
+El objetivo de 264 tCO2e equivale a reducir un
+30 %
+las emisiones entre 2025 y 2030.
+En
+Plan de transición
+se elige «No adoptado, con fecha prevista» porque la empresa está en un sector de alto impacto climático y todavía no tiene plan aprobado. Sería incorrecto elegir «No aplica».
+Bloque C4 — Riesgos climáticos
+Pregunta inicial:
+¿Has identificado peligros climáticos o eventos de transición?
+Pulsa
+Sí
+.
+Pregunta
+Qué escribes o eliges
+Peligros climáticos identificados
+Lluvias intensas e inundaciones en la cuenca del Lago de Valencia que pueden afectar la planta de Los Guayos. Olas de calor que elevan el riesgo en el almacenamiento de desechos inflamables.
+Eventos de transición identificados
+Normas más estrictas sobre emisiones del tratamiento térmico. Aumento del precio del diésel. Exigencias climáticas de clientes multinacionales en sus cadenas de suministro.
+Método de evaluación de exposición
+Revisión de mapas de amenaza de inundación por sede, registro histórico de eventos desde 2015 y entrevistas con los principales clientes sobre sus requisitos climáticos.
+Horizontes temporales
+Elige
+Corto, medio y largo plazo
+Valoración del riesgo
+Elige
+Medio
+Acciones de adaptación
+Elevación de la zona de almacenamiento y drenaje perimetral en la planta. Sistema de enfriamiento en el depósito de inflamables. Protocolo de suspensión de rutas ante alertas meteorológicas.
+Los riesgos son de dos tipos:
+físicos
+(lo que el clima le hace a la empresa, como una inundación) y
+de transición
+(los cambios de leyes, precios o clientes que trae la lucha contra el cambio climático).
+Parte 5 — Nivel 5: Grado inversión
+El último nivel. Al cerrarlo tienes el
+paquete completo
+que piden bancos e inversores.
+Bloque C5 — Plantilla adicional
+Pregunta
+Qué escribes o eliges
+Plantilla por país
+Venezuela: 48 personas.
+Plantilla a tiempo parcial
+3
+Trabajadores que no son empleados
+7
+Bloque C6 — Derechos humanos: políticas y procesos
+Pregunta
+Qué escribes o eliges
+¿Existe política de derechos humanos?
+Elige
+Sí
+Procesos de debida diligencia
+Evaluación anual de proveedores de transporte y gestores autorizados: condiciones laborales, seguridad y cumplimiento de permisos. Cláusulas de derechos humanos en los contratos.
+Canal de denuncias
+Buzón confidencial y correo electrónico gestionados por la Gerencia de Talento Humano, con garantía de no represalia.
+Bloque C7 — Incidentes graves en derechos humanos
+Pregunta inicial:
+¿Se han producido incidentes graves en derechos humanos?
+Pulsa
+No
+.
+Se responde
+No
+, y el bloque se cierra solo.
+Bloque C8 — Ingresos de determinados sectores
+Pregunta
+Qué escribes o eliges
+Ingresos por armas controvertidas
+0
+Ingresos por tabaco
+0
+Ingresos derivados del carbón
+0
+Ingresos derivados del petróleo
+0
+Ingresos derivados del gas
+0
+Ingresos por plaguicidas y agroquímicos
+0
+¿Excluida de índices de referencia de la UE alineados con París?
+Elige
+No
+Todo va en
+0
+, y aquí hay un matiz de tu especialidad: si EcoGestión trata desechos de perforación de una petrolera,
+esos ingresos no cuentan como «derivados del petróleo»
+. Ese renglón se refiere a explorar, extraer, refinar o distribuir combustibles fósiles, no a prestar servicios ambientales a quien lo hace.
+Bloque C9 — Diversidad de género en el órgano de gobierno
+Pregunta inicial:
+¿Existe un órgano de gobierno formalmente constituido?
+Pulsa
+Sí
+.
+Pregunta
+Qué escribes o eliges
+Miembros mujeres
+2
+Miembros hombres
+3
+La Junta Directiva tiene 5 miembros: 2 mujeres y 3 hombres. Es decir, un 40 % de mujeres.
+Parte 6 — Al terminar
+Vuelve a
+Ruta de niveles
+: los seis niveles muestran la marca de visto bueno.
+Entra en
+Informe VSME
+: las etiquetas
+OPCIÓN A
+y
+OPCIÓN B
+aparecen marcadas como completas.
+Pulsa
+Descargar Word
+. Se descarga un informe de unas 9 páginas, con la ficha de la empresa, cada nivel en tablas, el registro de omisiones y la correspondencia con los indicadores SFDR.
+Pulsa
+Datos para bancos (JSON)
+. Ese archivo no se lee a mano: es el que se envía al banco o cliente para que su sistema cargue los datos directamente.
+Cuando quieras usar la aplicación con una empresa real, pulsa
+Reiniciar
+en la Ruta de niveles para borrar los datos de prueba.
+Fuente normativa:
+EFRAG — VSME Standard (PDF)
+. Herramienta de preparación de información; no sustituye el criterio profesional ni un aseguramiento externo.
