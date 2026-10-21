@@ -1,0 +1,722 @@
+[
+  {
+    "key": "B1.balance",
+    "value": "5800000",
+    "status": "done",
+    "note": "",
+    "evidence": "En el balance: Estados financieros auditados 2025",
+    "owner": ""
+  },
+  {
+    "key": "B1.base",
+    "value": "Individual",
+    "status": "done",
+    "note": "",
+    "evidence": "",
+    "owner": ""
+  },
+  {
+    "key": "B1.empleados",
+    "value": "48",
+    "status": "done",
+    "note": "",
+    "evidence": "",
+    "owner": ""
+  },
+  {
+    "key": "B1.facturacion",
+    "value": "4350000",
+    "status": "done",
+    "note": "",
+    "evidence": "En la facturación: Declaración de ISLR 2025",
+    "owner": ""
+  },
+  {
+    "key": "B1.forma_juridica",
+    "value": "compania anonima",
+    "status": "done",
+    "note": "",
+    "evidence": "",
+    "owner": ""
+  },
+  {
+    "key": "B1.geo",
+    "value": "Sede administrativa Valencia; 10.1620; -68.0077\nPlanta de tratamiento Los Guayos; 10.1890; -67.9380\nCentro de acopio Maracay; 10.2469; -67.5958",
+    "status": "done",
+    "note": "",
+    "evidence": "",
+    "owner": ""
+  },
+  {
+    "key": "B1.moneda",
+    "value": "EUR — Euro",
+    "status": "done",
+    "note": "",
+    "evidence": "",
+    "owner": ""
+  },
+  {
+    "key": "B1.nace",
+    "value": "38.12, 38.22",
+    "status": "done",
+    "note": "",
+    "evidence": "",
+    "owner": ""
+  },
+  {
+    "key": "B1.nombre",
+    "value": "EcoGestión Ambiental del Centro, C.A.",
+    "status": "done",
+    "note": "",
+    "evidence": "",
+    "owner": ""
+  },
+  {
+    "key": "B1.omisiones",
+    "value": "no aplica, No se omite ninguna divulgación por información clasificada o sensible.",
+    "status": "done",
+    "note": "",
+    "evidence": "",
+    "owner": ""
+  },
+  {
+    "key": "B1.opcion",
+    "value": "OPCIÓN B: Módulo Básico y Módulo Completo",
+    "status": "done",
+    "note": "",
+    "evidence": "",
+    "owner": ""
+  },
+  {
+    "key": "B1.pais",
+    "value": "Venezuela",
+    "status": "done",
+    "note": "",
+    "evidence": "",
+    "owner": ""
+  },
+  {
+    "key": "B10.brecha",
+    "value": "6.5",
+    "status": "done",
+    "note": "",
+    "evidence": "",
+    "owner": ""
+  },
+  {
+    "key": "B10.convenio",
+    "value": "85",
+    "status": "done",
+    "note": "",
+    "evidence": "",
+    "owner": ""
+  },
+  {
+    "key": "B10.formacion",
+    "value": "24",
+    "status": "done",
+    "note": "",
+    "evidence": "",
+    "owner": ""
+  },
+  {
+    "key": "B10.salario_minimo",
+    "value": "Sí",
+    "status": "done",
+    "note": "",
+    "evidence": "",
+    "owner": ""
+  },
+  {
+    "key": "B11.condenas",
+    "value": "0",
+    "status": "done",
+    "note": "",
+    "evidence": "",
+    "owner": ""
+  },
+  {
+    "key": "B11.detalle",
+    "value": "No se registraron condenas ni multas por corrupción o soborno en el período. La empresa cuenta con un código de ética y un canal de denuncias gestionado por la dirección.",
+    "status": "done",
+    "note": "",
+    "evidence": "",
+    "owner": ""
+  },
+  {
+    "key": "B11.multas",
+    "value": "0",
+    "status": "done",
+    "note": "",
+    "evidence": "",
+    "owner": ""
+  },
+  {
+    "key": "B2.certificaciones",
+    "value": "Sistemas de Gestión Internacionales (Voluntarios / En proceso de adopción) ISO 14001:2015 (Sistema de Gestión Ambiental):  Estado: En implementación / Fase avanzada.",
+    "status": "done",
+    "note": "",
+    "evidence": "",
+    "owner": ""
+  },
+  {
+    "key": "B2.iniciativas",
+    "value": "Dimensión Ambiental (Environmental)\nTransición Energética en Plantas de Tratamiento:\nIniciativa: Instalación progresiva de sistemas de paneles solares fotovoltaicos en las instalaciones de almacenamiento y tratamiento para reducir la dependencia de la red eléctrica nacional y disminuir la huella operativa.\nMeta: Cubrir un 30% del consumo energético interno con energía limpia para el cierre del próximo ciclo.\nEconomía Circular y Valorización de Residuos:\nIniciativa: Desarrollo de un programa de co-procesamiento y valorización energética o material para ciertos flujos de residuos peligrosos (como solventes o aceites usados), buscando transformarlos en combustibles alternativos para la industria cementera, en lugar de ir a disposición final tradicional.\nMeta: Incrementar la tasa de valorización de residuos gestionados en un 15%.\n2. Dimensión Social (Social)\nPrograma de Capacitación Comunitaria e Industrial (\"Aliados Verdes\"):\nIniciativa: Lanzamiento de talleres gratuitos de concientización y manejo básico de residuos dirigidos a las comunidades vecinas a los corredores industriales de Valencia y Maracay, así como a las PYMES locales que generan pequeños volúmenes de RESPEL.\nMeta: Capacitar al menos a 20 empresas aliadas y 3 comunidades locales por año.\nBienestar Integral y Ergonomía Avanzada:\nIniciativa: Adquisición de nueva tecnología de asistencia mecánica y actualización ergonómica de la flota y estaciones de manipulación manual de cargas para el personal operativo, reduciendo aún más el riesgo de fatiga o lesiones laborales.\n3. Dimensión de Gobernanza (Governance)\nDigitalización y Trazabilidad Blockchain para Manifiestos:\nIniciativa: Migración total de los manifiestos de desechos y certificados de disposición final a una plataforma digital con trazabilidad garantizada, facilitando a los clientes industriales el acceso a sus reportes de impacto ambiental en tiempo real.\n\nMeta: Operar con procesos 100% libres de papel en la relación cliente-regulador a mediano plazo.\nCódigo de Conducta para Proveedores y Aliados de Transporte:\nIniciativa: Extender los criterios ESG de la empresa a la cadena de suministro y contratistas externos de transporte de carga pesada, exigiéndoles estándares mínimos de seguridad vial, mantenimiento ambiental y derechos laborales.",
+    "status": "done",
+    "note": "",
+    "evidence": "",
+    "owner": ""
+  },
+  {
+    "key": "B2.practicas",
+    "value": "Gestión Integral de Residuos Peligrosos (RESPEL):\nPráctica: Procedimiento operativo estandarizado para la recolección, transporte (con unidades acondicionadas y permisología vigente del MINEC) y tratamiento/disposición final de residuos industriales peligrosos.\n\nPolítica: Política de \"Cero Vertidos Ilegales\" y cumplimiento estricto de la Ley Penal del Ambiente y normas técnicas de manejo de materiales peligrosos.\nControl de Emisiones y Eficiencia Energética:\nPráctica: Monitoreo periódico del consumo eléctrico en las plantas de tratamiento y mantenimiento preventivo de la flota vehicular para reducir la huella de carbono.\nGestión del Agua:\nPráctica: Control y tratamiento de efluentes generados en los procesos de lavado y descontaminación de envases o equipos, asegurando que cumplan con los parámetros de descarga permitidos.  Salud y Seguridad Ocupacional (SST):\nPráctica: Cumplimiento de la LOPCYMAT y el INPSASEL. Uso obligatorio de Equipos de Protección Personal (EPP) especializados para la manipulación de residuos peligrosos, realización de exámenes médicos semestrales y comités de seguridad activos.\nPolítica: Política de Seguridad y Salud en el Trabajo basada en la premisa de \"Cero Accidentes\", con inducciones diarias (charlas de 5 minutos) antes de cada operativa. Ética y Cumplimiento Normativo (Compliance):\n\nPráctica: Auditorías internas regulares sobre los permisos ambientales, licencias de funcionamiento municipales y registros ante el ente rector (MINEC).\nPolítica: Código de Ética y Conducta que prohíbe prácticas de soborno, corrupción y garantiza la transparencia en la relación con las industrias clientes y organismos reguladores. Gestión de Riesgos:\nPráctica: Planes de Emergencia y Contingencia (PEC) actualizados para responder de manera inmediata ante cualquier incidente vial o en planta durante el manejo de sustancias peligrosas.",
+    "status": "done",
+    "note": "",
+    "evidence": "",
+    "owner": ""
+  },
+  {
+    "key": "B3.alcance1",
+    "value": "255",
+    "status": "done",
+    "note": "",
+    "evidence": "Registro de consumo de diésel de la flota 2025",
+    "owner": ""
+  },
+  {
+    "key": "B3.alcance2_location",
+    "value": "122",
+    "status": "done",
+    "note": "",
+    "evidence": "Facturas CORPOELEC 2025 (580 MWh)",
+    "owner": ""
+  },
+  {
+    "key": "B3.alcance2_market",
+    "value": "122",
+    "status": "done",
+    "note": "",
+    "evidence": "",
+    "owner": ""
+  },
+  {
+    "key": "B3.alcance3",
+    "value": "0",
+    "status": "na",
+    "note": "Motivo: Opcional en el Módulo Básico; no se calcula en este ejercicio.",
+    "evidence": "",
+    "owner": ""
+  },
+  {
+    "key": "B3.energia_no_renovable",
+    "value": "1530",
+    "status": "done",
+    "note": "",
+    "evidence": "Facturas CORPOELEC 2025 y registro de compras de diésel",
+    "owner": ""
+  },
+  {
+    "key": "B3.energia_renovable",
+    "value": "40",
+    "status": "done",
+    "note": "",
+    "evidence": "Lecturas del inversor de los paneles solares 2025",
+    "owner": ""
+  },
+  {
+    "key": "B3.energia_total",
+    "value": "1570",
+    "status": "done",
+    "note": "",
+    "evidence": "Facturas CORPOELEC 2025 y registro de compras de diésel",
+    "owner": ""
+  },
+  {
+    "key": "B3.factores",
+    "value": "Diésel: 2,68 kgCO2e por litro (factor ilustrativo). Electricidad de la red: 0,21 tCO2e por MWh (factor ilustrativo). Datos de prueba; en un informe real se usan los factores oficiales vigentes.",
+    "status": "done",
+    "note": "",
+    "evidence": "",
+    "owner": ""
+  },
+  {
+    "key": "B3.intensidad",
+    "value": "86.7",
+    "status": "done",
+    "note": "",
+    "evidence": "",
+    "owner": ""
+  },
+  {
+    "key": "B4.agua",
+    "value": "Bajo la estricta política de \"Cero Vertidos Ilegales\" y el cumplimiento de la normativa ambiental venezolana (como las Normas para la Clasificación y el Control de la Calidad de los Cuerpos de Agua y Vertidos Líquidos), EcoGestión Ambiental del Centro, C.A. no realiza descargas directas de efluentes contaminantes a cuerpos de agua (ríos, lagos como el de Valencia, o redes de alcantarillado público).\nTodo residuo líquido peligroso, agua de lavado de tanques o efluente generado en el proceso de tratamiento es estrictamente contenido, tratado internamente para neutralizar sus propiedades peligrosas o segregado y transferido a plantas de disposición final autorizadas, evitando por completo cualquier vertido al ambiente.",
+    "status": "done",
+    "note": "",
+    "evidence": "",
+    "owner": ""
+  },
+  {
+    "key": "B4.aire",
+    "value": "Gases de Combustión (de fuentes fijas y móviles):Monóxido de Carbono (CO) y Dióxido de Azufre ($\\text{SO}_2$), generados por los hornos/sistemas de tratamiento térmico de residuos y por la flota de camiones de carga pesada que cubren la ruta Valencia-Maracay.   Óxidos de Nitrógeno ($\\text{NO}_x$), producto de la combustión a altas temperaturas en instalaciones de tratamiento.Compuestos Orgánicos Volátiles (COV) y Solventes:Emisiones de vapores orgánicos y solventes fotoquímicamente reactivos liberados durante la manipulación, trasvase o tratamiento temporal de residuos industriales peligrosos (como restos de pinturas, tintas, diluyentes o hidrocarburos).Material Particulado ($\\text{PM}_{10}$ y $\\text{PM}_{2.5}$):Polvos y partículas finas en suspensión originadas por el movimiento de vehículos en zonas operativas de tierra/asfalto, manipulación de ciertos sólidos peligrosos o cenizas de procesos de termodestrucción.",
+    "status": "done",
+    "note": "",
+    "evidence": "",
+    "owner": ""
+  },
+  {
+    "key": "B4.obligado",
+    "value": "Sí",
+    "status": "done",
+    "note": "",
+    "evidence": "",
+    "owner": ""
+  },
+  {
+    "key": "B4.suelo",
+    "value": "Para garantizar esto, las áreas de almacenamiento temporal, manipulación y tratamiento de residuos en nuestras plantas de Valencia y Maracay cuentan con infraestructura especializada y medidas estrictas de prevención:\n\nPisos industriales impermeabilizados con recubrimientos epóxicos o selladores químicos de alta resistencia.\nSistemas de contención secundaria (diques y bandejas de retención) capaces de capturar al 100% cualquier posible fuga accidental antes de que entre en contacto con el suelo.\nProtocolos de respuesta inmediata ante derrames y control estricto de impermeabilidad en los vehículos de transporte de carga pesada.",
+    "status": "done",
+    "note": "",
+    "evidence": "",
+    "owner": ""
+  },
+  {
+    "key": "B5.aplica",
+    "value": "No",
+    "status": "done",
+    "note": "",
+    "evidence": "",
+    "owner": ""
+  },
+  {
+    "key": "B6.consumo",
+    "value": "3100",
+    "status": "done",
+    "note": "",
+    "evidence": "",
+    "owner": ""
+  },
+  {
+    "key": "B6.estres",
+    "value": "",
+    "status": "na",
+    "note": "no",
+    "evidence": "",
+    "owner": ""
+  },
+  {
+    "key": "B6.extraccion",
+    "value": "14200",
+    "status": "done",
+    "note": "",
+    "evidence": "Facturas de Hidrocentro 2025 y lecturas del pozo",
+    "owner": ""
+  },
+  {
+    "key": "B7.circular",
+    "value": "Reciclaje del aceite usado de la flota con gestor autorizado. Reutilización de envases de clientes tras su descontaminación. Recuperación de metales de los residuos procesados.",
+    "status": "done",
+    "note": "",
+    "evidence": "",
+    "owner": ""
+  },
+  {
+    "key": "B7.residuos_peligrosos",
+    "value": "142",
+    "status": "done",
+    "note": "",
+    "evidence": "Manifiestos de despacho de residuos propios 2025",
+    "owner": ""
+  },
+  {
+    "key": "B7.residuos_reciclados",
+    "value": "38",
+    "status": "done",
+    "note": "",
+    "evidence": "",
+    "owner": ""
+  },
+  {
+    "key": "B7.residuos_total",
+    "value": "186",
+    "status": "done",
+    "note": "",
+    "evidence": "Manifiestos de despacho de residuos propios 2025",
+    "owner": ""
+  },
+  {
+    "key": "B8.hombres",
+    "value": "35",
+    "status": "done",
+    "note": "",
+    "evidence": "",
+    "owner": ""
+  },
+  {
+    "key": "B8.indefinidos",
+    "value": "42",
+    "status": "done",
+    "note": "",
+    "evidence": "",
+    "owner": ""
+  },
+  {
+    "key": "B8.mujeres",
+    "value": "13",
+    "status": "done",
+    "note": "",
+    "evidence": "",
+    "owner": ""
+  },
+  {
+    "key": "B8.rotacion",
+    "value": "8.3",
+    "status": "done",
+    "note": "",
+    "evidence": "",
+    "owner": ""
+  },
+  {
+    "key": "B8.temporales",
+    "value": "6",
+    "status": "done",
+    "note": "",
+    "evidence": "",
+    "owner": ""
+  },
+  {
+    "key": "B8.total",
+    "value": "48",
+    "status": "done",
+    "note": "",
+    "evidence": "",
+    "owner": ""
+  },
+  {
+    "key": "B9.accidentes",
+    "value": "2",
+    "status": "done",
+    "note": "",
+    "evidence": "Registro de accidentes 2025 y notificaciones al INPSASEL",
+    "owner": ""
+  },
+  {
+    "key": "B9.fallecimientos",
+    "value": "0",
+    "status": "done",
+    "note": "",
+    "evidence": "",
+    "owner": ""
+  },
+  {
+    "key": "B9.tasa",
+    "value": "20.8",
+    "status": "done",
+    "note": "",
+    "evidence": "",
+    "owner": ""
+  },
+  {
+    "key": "C1.grupos_interes",
+    "value": "Clientes industriales, ministerio con competencia ambiental, comunidades vecinas a la planta de Los Guayos, trabajadores y entidades financieras.",
+    "status": "done",
+    "note": "",
+    "evidence": "",
+    "owner": ""
+  },
+  {
+    "key": "C1.mercados",
+    "value": "Industria química, farmacéutica, automotriz y metalmecánica de los estados Carabobo y Aragua. Clientes con matrices multinacionales que exigen trazabilidad ESG a sus proveedores.",
+    "status": "done",
+    "note": "",
+    "evidence": "",
+    "owner": ""
+  },
+  {
+    "key": "C1.modelo",
+    "value": "Empresa de servicios ambientales que recoge, transporta, trata y dispone desechos peligrosos de clientes industriales, bajo contratos anuales con tarifa por tonelada.",
+    "status": "done",
+    "note": "",
+    "evidence": "",
+    "owner": ""
+  },
+  {
+    "key": "C1.productos",
+    "value": "Recolección y transporte de desechos peligrosos (45 % de ingresos). Tratamiento y disposición final (40 %). Asesoría en planes de manejo y trámites ambientales (15 %).",
+    "status": "done",
+    "note": "",
+    "evidence": "",
+    "owner": ""
+  },
+  {
+    "key": "C2.objetivos_politicas",
+    "value": "Reducir 10 % el consumo de diésel por tonelada transportada para 2026 (avance 2025: 4 %). Cero derrames en transporte (cumplido en 2025).",
+    "status": "done",
+    "note": "",
+    "evidence": "",
+    "owner": ""
+  },
+  {
+    "key": "C2.responsable",
+    "value": "Gerencia General, con seguimiento trimestral de la Junta Directiva.",
+    "status": "done",
+    "note": "",
+    "evidence": "",
+    "owner": ""
+  },
+  {
+    "key": "C3.acciones",
+    "value": "Renovación de la flota con unidades a gas natural, ampliación de la generación solar propia y optimización de rutas de recolección.",
+    "status": "done",
+    "note": "",
+    "evidence": "",
+    "owner": ""
+  },
+  {
+    "key": "C3.alcances",
+    "value": "Alcance 1 y Alcance 2, 100 % de las emisiones, en valores absolutos.",
+    "status": "done",
+    "note": "",
+    "evidence": "",
+    "owner": ""
+  },
+  {
+    "key": "C3.ano_base",
+    "value": "2025",
+    "status": "done",
+    "note": "",
+    "evidence": "",
+    "owner": ""
+  },
+  {
+    "key": "C3.ano_objetivo",
+    "value": "2030",
+    "status": "done",
+    "note": "",
+    "evidence": "",
+    "owner": ""
+  },
+  {
+    "key": "C3.plan_detalle",
+    "value": "Adopción prevista para junio de 2027, con aprobación de la Junta Directiva.",
+    "status": "done",
+    "note": "",
+    "evidence": "",
+    "owner": ""
+  },
+  {
+    "key": "C3.plan_transicion",
+    "value": "No adoptado, con fecha prevista",
+    "status": "done",
+    "note": "",
+    "evidence": "",
+    "owner": ""
+  },
+  {
+    "key": "C3.tiene_objetivo",
+    "value": "Sí",
+    "status": "done",
+    "note": "",
+    "evidence": "",
+    "owner": ""
+  },
+  {
+    "key": "C3.valor_base",
+    "value": "377",
+    "status": "done",
+    "note": "",
+    "evidence": "",
+    "owner": ""
+  },
+  {
+    "key": "C3.valor_objetivo",
+    "value": "264",
+    "status": "done",
+    "note": "",
+    "evidence": "",
+    "owner": ""
+  },
+  {
+    "key": "C4.adaptacion",
+    "value": "Elevación de la zona de almacenamiento y drenaje perimetral en la planta. Sistema de enfriamiento en el depósito de inflamables. Protocolo de suspensión de rutas ante alertas meteorológicas.",
+    "status": "done",
+    "note": "",
+    "evidence": "",
+    "owner": ""
+  },
+  {
+    "key": "C4.exposicion",
+    "value": "Revisión de mapas de amenaza de inundación por sede, registro histórico de eventos desde 2015 y entrevistas con los principales clientes sobre sus requisitos climáticos.",
+    "status": "done",
+    "note": "",
+    "evidence": "",
+    "owner": ""
+  },
+  {
+    "key": "C4.horizonte",
+    "value": "Corto, medio y largo plazo",
+    "status": "done",
+    "note": "",
+    "evidence": "",
+    "owner": ""
+  },
+  {
+    "key": "C4.identificados",
+    "value": "Sí",
+    "status": "done",
+    "note": "",
+    "evidence": "",
+    "owner": ""
+  },
+  {
+    "key": "C4.magnitud",
+    "value": "Medio",
+    "status": "done",
+    "note": "",
+    "evidence": "",
+    "owner": ""
+  },
+  {
+    "key": "C4.peligros",
+    "value": "Lluvias intensas e inundaciones en la cuenca del Lago de Valencia que pueden afectar la planta de Los Guayos. Olas de calor que elevan el riesgo en el almacenamiento de desechos inflamables.",
+    "status": "done",
+    "note": "",
+    "evidence": "",
+    "owner": ""
+  },
+  {
+    "key": "C4.transicion",
+    "value": "Normas más estrictas sobre emisiones del tratamiento térmico. Aumento del precio del diésel. Exigencias climáticas de clientes multinacionales en sus cadenas de suministro.",
+    "status": "done",
+    "note": "",
+    "evidence": "",
+    "owner": ""
+  },
+  {
+    "key": "C5.no_empleados",
+    "value": "7",
+    "status": "done",
+    "note": "",
+    "evidence": "",
+    "owner": ""
+  },
+  {
+    "key": "C5.pais",
+    "value": "Venezuela: 48 personas",
+    "status": "done",
+    "note": "",
+    "evidence": "",
+    "owner": ""
+  },
+  {
+    "key": "C5.tiempo_parcial",
+    "value": "3",
+    "status": "done",
+    "note": "",
+    "evidence": "",
+    "owner": ""
+  },
+  {
+    "key": "C6.canal",
+    "value": "Buzón confidencial y correo electrónico gestionados por la Gerencia de Talento Humano, con garantía de no represalia.",
+    "status": "done",
+    "note": "",
+    "evidence": "",
+    "owner": ""
+  },
+  {
+    "key": "C6.diligencia",
+    "value": "Evaluación anual de proveedores de transporte y gestores autorizados: condiciones laborales, seguridad y cumplimiento de permisos. Cláusulas de derechos humanos en los contratos.",
+    "status": "done",
+    "note": "",
+    "evidence": "",
+    "owner": ""
+  },
+  {
+    "key": "C6.politica",
+    "value": "Sí",
+    "status": "done",
+    "note": "",
+    "evidence": "",
+    "owner": ""
+  },
+  {
+    "key": "C7.incidentes",
+    "value": "No",
+    "status": "done",
+    "note": "",
+    "evidence": "",
+    "owner": ""
+  },
+  {
+    "key": "C8.agroquimicos",
+    "value": "0",
+    "status": "done",
+    "note": "",
+    "evidence": "",
+    "owner": ""
+  },
+  {
+    "key": "C8.armas",
+    "value": "0",
+    "status": "done",
+    "note": "",
+    "evidence": "",
+    "owner": ""
+  },
+  {
+    "key": "C8.carbon",
+    "value": "0",
+    "status": "done",
+    "note": "",
+    "evidence": "",
+    "owner": ""
+  },
+  {
+    "key": "C8.exclusion",
+    "value": "No",
+    "status": "done",
+    "note": "",
+    "evidence": "",
+    "owner": ""
+  },
+  {
+    "key": "C8.petroleo",
+    "value": "0",
+    "status": "done",
+    "note": "",
+    "evidence": "",
+    "owner": ""
+  },
+  {
+    "key": "C8.tabaco",
+    "value": "0",
+    "status": "done",
+    "note": "",
+    "evidence": "",
+    "owner": ""
+  },
+  {
+    "key": "C9.existe",
+    "value": "Sí",
+    "status": "done",
+    "note": "",
+    "evidence": "",
+    "owner": ""
+  },
+  {
+    "key": "C9.hombres",
+    "value": "3",
+    "status": "done",
+    "note": "",
+    "evidence": "",
+    "owner": ""
+  },
+  {
+    "key": "C9.mujeres",
+    "value": "2",
+    "status": "done",
+    "note": "",
+    "evidence": "",
+    "owner": ""
+  }
+]

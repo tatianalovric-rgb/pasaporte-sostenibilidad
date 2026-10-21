@@ -28,6 +28,25 @@ sqlite.exec(`CREATE TABLE IF NOT EXISTS users (
   created_at TEXT NOT NULL
 )`);
 
+import demoSeed from "./seed-demo.json";
+
+try {
+  const countRow = sqlite.prepare("SELECT COUNT(*) as count FROM entries WHERE user_id = 'local'").get() as { count: number };
+  if (countRow && countRow.count === 0 && Array.isArray(demoSeed) && demoSeed.length > 0) {
+    const insert = sqlite.prepare(`
+      INSERT INTO entries (user_id, key, value, status, note, evidence, owner)
+      VALUES ('local', @key, @value, @status, @note, @evidence, @owner)
+    `);
+    const insertMany = sqlite.transaction((rows: any[]) => {
+      for (const row of rows) insert.run(row);
+    });
+    insertMany(demoSeed);
+    console.log(`[Storage] Pre-seeded ${demoSeed.length} demo entries for 'local'`);
+  }
+} catch (e) {
+  console.warn("[Storage] Note on auto-seeding:", e);
+}
+
 export const db = drizzle(sqlite);
 
 export interface IStorage {
