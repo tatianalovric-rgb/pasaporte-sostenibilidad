@@ -13,21 +13,6 @@ export function Logo({ className = "h-11 w-auto" }: { className?: string }) {
   if (hasError) {
     return (
       <div className="flex items-center gap-2 text-primary font-bold tracking-tight">
-        <svg
-          viewBox="0 0 32 32"
-          fill="none"
-          className="h-8 w-8 text-primary"
-          aria-label="Tatiana Lovric"
-          role="img"
-        >
-          <path
-            d="M3 27h5v-5H3zM9.5 27h5v-9h-5zM16 27h5V13h-5zM22.5 27h5V5h-5z"
-            stroke="currentColor"
-            strokeWidth="1.8"
-            strokeLinejoin="round"
-          />
-          <path d="M2 30h28" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
-        </svg>
         <span className="font-display uppercase tracking-wider text-sm font-extrabold">Tatiana Lovric</span>
       </div>
     );
@@ -35,9 +20,9 @@ export function Logo({ className = "h-11 w-auto" }: { className?: string }) {
 
   return (
     <img
-      src="/logo-tatiana-lovric-clean.png"
-      alt="Tatiana Lovric · Consultoría Estratégica"
-      className={cn("h-11 w-auto object-contain transition-transform", className)}
+      src="/logo-emblem.jpg"
+      alt="Tatiana Lovric Global Consulting"
+      className={cn("h-11 w-auto object-contain transition-transform rounded-lg", className)}
       onError={() => setHasError(true)}
     />
   );
@@ -102,15 +87,24 @@ export function AppShell({ children }: { children: ReactNode }) {
       <header className="sticky top-0 z-40 border-b border-border/80 bg-white/95 dark:bg-background/95 backdrop-blur-md shadow-xs">
         <div className="mx-auto flex h-18 max-w-6xl items-center justify-between gap-4 px-4 sm:px-6">
           <Link href="/" className="flex items-center gap-3.5 group text-primary" data-testid="link-home">
-            <div className="p-1 rounded-lg bg-white shadow-2xs group-hover:scale-105 transition-transform">
-              <Logo className="h-11 sm:h-12 w-auto" />
+            <div className="p-1 rounded-xl bg-white shadow-xs group-hover:scale-105 transition-transform flex items-center justify-center">
+              <img
+                src="/logo-emblem.jpg"
+                alt="Tatiana Lovric Global Consulting"
+                className="h-11 sm:h-12 w-auto object-contain rounded-lg"
+              />
             </div>
             <div className="flex flex-col text-left">
-              <span className="font-display text-base font-extrabold uppercase tracking-[0.05em] text-foreground leading-tight group-hover:text-primary transition-colors">
-                Tatiana Lovric
-              </span>
+              <div className="flex items-center gap-1.5">
+                <span className="font-display text-base font-extrabold uppercase tracking-[0.05em] text-slate-900 leading-tight group-hover:text-primary transition-colors">
+                  Tatiana Lovric
+                </span>
+                <span className="text-[0.62rem] font-bold text-sky-700 bg-sky-50 border border-sky-200 tracking-wider uppercase px-1.5 py-0.2 rounded">
+                  Global Consulting
+                </span>
+              </div>
               <span className="text-[0.65rem] tracking-wider text-muted-foreground uppercase font-semibold">
-                {lang === "es" ? "Sostenibilidad & Buen Gobierno" : "Sustainability & Governance"}
+                {lang === "es" ? "Estrategia · Sostenibilidad · Buen Gobierno" : "Strategy · Sustainability · Governance"}
               </span>
             </div>
           </Link>

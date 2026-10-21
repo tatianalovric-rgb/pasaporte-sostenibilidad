@@ -75,21 +75,17 @@ export default function Home() {
 
         {/* Logotipo Oficial en Gran Formato (Nítido y Protagónico) */}
         <div className="flex flex-col items-center justify-center gap-4">
-          <div className="p-5 sm:p-6 rounded-3xl bg-white border border-slate-200/90 shadow-sm transition-all hover:shadow-md">
+          <div className="p-4 sm:p-6 rounded-3xl bg-white border border-slate-200/90 shadow-md transition-all hover:shadow-lg max-w-sm sm:max-w-md mx-auto">
             <img
-              src="/logo-tatiana-lovric-clean.png"
-              alt="Tatiana Lovric · Consultoría Estratégica"
-              className="h-28 sm:h-36 w-auto object-contain"
+              src="/logo-global-consulting.jpg"
+              alt="Tatiana Lovric Global Consulting · Where Law, Strategy & Global Vision Converge"
+              className="w-full h-auto object-contain rounded-2xl"
             />
           </div>
 
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-slate-100 text-slate-800 border border-slate-200 text-xs font-semibold tracking-wider uppercase">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-slate-100 text-slate-800 border border-slate-200 text-xs font-semibold tracking-wider uppercase shadow-2xs">
             <ShieldCheck className="h-4 w-4 text-primary" />
-            <span>
-              {lang === "es"
-                ? "Consultoría Estratégica · Sostenibilidad & Buen Gobierno"
-                : "Strategic Advisory · Sustainability & Good Governance"}
-            </span>
+            <span>Where Law, Strategy & Global Vision Converge</span>
           </div>
         </div>
 
@@ -435,22 +431,23 @@ export default function Home() {
         {/* Tarjeta de Identidad */}
         <div className="lg:col-span-5 p-8 sm:p-10 rounded-3xl bg-white border border-slate-200/90 shadow-sm space-y-6 text-center">
           <div className="flex justify-center">
-            <div className="p-4 rounded-2xl bg-slate-50 border border-slate-200">
+            <div className="p-3 rounded-2xl bg-slate-50 border border-slate-200 shadow-2xs">
               <img
-                src="/logo-tatiana-lovric-clean.png"
-                alt="Tatiana Lovric"
-                className="h-28 w-auto object-contain"
+                src="/logo-global-consulting.jpg"
+                alt="Tatiana Lovric Global Consulting"
+                className="w-full max-w-[280px] h-auto object-contain rounded-xl"
               />
             </div>
           </div>
-          <div className="space-y-1.5">
+          <div className="space-y-1">
             <h3 className="text-2xl font-extrabold text-slate-900 tracking-tight">
               Tatiana Lovric
             </h3>
-            <p className="text-xs font-semibold text-primary uppercase tracking-wider">
-              {lang === "es"
-                ? "Consultora Estratégica & Gobierno Corporativo"
-                : "Strategic Advisory & Corporate Governance"}
+            <p className="text-xs font-bold text-sky-800 uppercase tracking-wider">
+              Global Consulting · Sostenibilidad & Buen Gobierno
+            </p>
+            <p className="text-[0.7rem] text-slate-500 font-medium">
+              Where Law, Strategy & Global Vision Converge
             </p>
           </div>
           <div className="p-5 rounded-2xl bg-slate-50 border border-slate-200/80 text-xs text-slate-600 leading-relaxed text-left italic">
