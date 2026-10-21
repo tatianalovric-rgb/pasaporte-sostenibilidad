@@ -1,4 +1,4 @@
-﻿import { useState } from "react";
+import { useState } from "react";
 import { useLocation } from "wouter";
 import { useAuth } from "@/lib/auth";
 import { useI18n } from "@/lib/i18n";
@@ -33,7 +33,7 @@ export default function AuthPage() {
     setIsLoggingIn(true);
     try {
       await login({ email: loginEmail, password: loginPassword });
-      setLocation("/");
+      setLocation("/pasaporte");
     } catch (err: any) {
       setLoginError(err.message || "Error al iniciar sesión");
     } finally {
@@ -47,7 +47,7 @@ export default function AuthPage() {
     setIsRegistering(true);
     try {
       await register({ companyName: regName, email: regEmail, password: regPassword });
-      setLocation("/");
+      setLocation("/pasaporte");
     } catch (err: any) {
       setRegError(err.message || "Error al registrar la empresa");
     } finally {
@@ -112,7 +112,7 @@ export default function AuthPage() {
             <div className="flex flex-col sm:flex-row gap-3 pt-2">
               <Button
                 className="flex-1 gap-2"
-                onClick={() => setLocation("/")}
+                onClick={() => setLocation("/pasaporte")}
               >
                 <FileText className="h-4 w-4" />
                 {lang === "es" ? "Ir al Expediente" : "Go to Dossier"}

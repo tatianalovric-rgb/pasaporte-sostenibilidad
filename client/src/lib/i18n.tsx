@@ -125,6 +125,95 @@ export const translations = {
     registerSuccessToastDesc: "Tu expediente ha sido creado con aislamiento seguro.",
     logoutSuccessToast: "Sesión cerrada",
 
+    // Navegación Corporativa
+    navHome: "Inicio",
+    navPassport: "Pasaporte ESG",
+    navServices: "Servicios",
+    navAbout: "Sobre Mí",
+    navContact: "Contacto",
+    ctaOpenApp: "Acceder al Pasaporte",
+    ctaRequestAudit: "Agendar Diagnóstico",
+
+    // Home / Landing Page Corporativa
+    homeHeroTag: "Tatiana Lovric · Consultoría Estratégica & Gobierno Corporativo",
+    homeHeroTitle: "Acredita la Sostenibilidad de tu Empresa para Ganar Licitaciones y Financiación",
+    homeHeroSubtitle:
+      "Acompañamos a empresas de cualquier tamaño a estructurar, validar y emitir su Pasaporte de Sostenibilidad bajo el estándar europeo VSME de EFRAG. El expediente oficial para ganar concursos públicos y privados, homologarse ante grandes compradores multinacionales y acceder a financiación bancaria preferente.",
+    homeBtnStart: "Iniciar mi Pasaporte ESG",
+    homeBtnDemo: "Explorar Demostración",
+    homeBtnConsult: "Agendar Diagnóstico con Tatiana",
+    homeTrustStandard: "Estándar Oficial EFRAG VSME",
+    homeTrustSfdr: "Alineado con Banca y SFDR",
+    homeTrustCsrd: "Preparación Directiva CSRD",
+    homeTrustProcurement: "Solvencia Técnica en Licitaciones",
+
+    // Retos / Soluciones
+    homeWhyTitle: "¿Por qué tu empresa necesita un Pasaporte de Sostenibilidad hoy?",
+    homeWhySubtitle:
+      "Las exigencias de sostenibilidad ya no son teóricas: deciden la adjudicación de contratos y las condiciones de financiación bancaria.",
+    homeCard1Title: "Licitaciones Públicas y Privadas",
+    homeCard1Desc:
+      "Los pliegos de contratación y comités de compras multinacionales exigen cláusulas ambientales, sociales y de gobernanza obligatorias para adjudicar contratos.",
+    homeCard2Title: "Banca y Financiación Sostenible (SFDR)",
+    homeCard2Desc:
+      "Las entidades financieras evalúan tu perfil ESG para autorizar créditos, líneas de avales y condiciones bonificadas según la taxonomía europea.",
+    homeCard3Title: "Cadenas de Valor de Grandes Compradores",
+    homeCard3Desc:
+      "Las grandes corporaciones obligadas a reportar bajo CSRD trasladan sus exigencias a sus proveedores; sin acreditación documentada, quedas fuera de la lista homologada.",
+
+    // Servicios
+    homeServicesTitle: "Servicios de Consultoría Estratégica",
+    homeServicesSubtitle:
+      "Acompañamiento directivo y técnico para transformar la sostenibilidad en una ventaja competitiva real.",
+    homeSrv1Title: "Elaboración Integral del Pasaporte de Sostenibilidad",
+    homeSrv1Desc:
+      "Ruta estructurada para recopilar, calcular y redactar cada una de las divulgaciones obligatorias (Módulo Básico B1–B11) y completas (C1–C9).",
+    homeSrv2Title: "Diagnóstico Express de Brecha Normativa ESG",
+    homeSrv2Desc:
+      "Identificamos en días qué requisitos cumples, cuáles faltan y qué evidencias documentales te exigirán tus clientes y entidades financieras.",
+    homeSrv3Title: "Gobierno Corporativo y Políticas Internas",
+    homeSrv3Desc:
+      "Diseño de códigos éticos, políticas anticorrupción, planes de igualdad y estructuras de administración para alcanzar el Grado Inversión.",
+    homeSrv4Title: "Defensa Técnica en Pliegos de Licitación",
+    homeSrv4Desc:
+      "Revisión documental de los criterios de solvencia técnica y redacción de memorias de sostenibilidad para tus ofertas de licitación.",
+
+    // Etapas
+    homeStepsTitle: "Un Método Claro en 6 Etapas Consecutivas",
+    homeStepsSubtitle:
+      "De la ficha básica al expediente final con Grado Inversión y correspondencia bancaria SFDR.",
+    homeStep0: "N0 · Ficha y Opción: Denominación, sector y alcance de reporte (Básico u Opción B).",
+    homeStep1: "N1 · Clima y Energía: Consumo energético y emisiones de gases de efecto invernadero (Alcance 1 y 2).",
+    homeStep2: "N2 · Capital Humano: Salud laboral, formación continua y brecha salarial de género.",
+    homeStep3: "N3 · Conducta Empresarial: Políticas anticorrupción, condenas y cierre del Módulo Básico.",
+    homeStep4: "N4 · Planes e Inversión: Objetivos cuantitativos y plan de transición con CAPEX verde.",
+    homeStep5: "N5 · Gobierno Corporativo: Órgano de administración y correspondencia con el estándar SFDR.",
+
+    // Sobre Tatiana
+    homeAboutTitle: "Sobre Tatiana Lovric",
+    homeAboutSubtitle: "Consultora Estratégica · Sostenibilidad y Gobierno Corporativo",
+    homeAboutText1:
+      "Especializada en transformar la sostenibilidad corporativa y los marcos regulatorios europeos (EFRAG VSME, CSRD, SFDR) en ventajas competitivas reales para las empresas.",
+    homeAboutText2:
+      "Mi enfoque no es burocrático ni teórico: trabajo codo a codo con la dirección y los equipos operativos para que cada dato se traduzca en mayor solvencia para ganar licitaciones, homologarse ante multinacionales y obtener condiciones bancarias preferenciales.",
+    homeAboutQuote:
+      "«La sostenibilidad no es un trámite estético: hoy es el filtro que decide quién gana los contratos y quién accede al capital.»",
+
+    // Contacto
+    homeContactTitle: "¿Hablamos de tus próximas licitaciones o de tu Pasaporte ESG?",
+    homeContactSubtitle:
+      "Agenda una sesión inicial de diagnóstico o contáctame directamente por WhatsApp o correo corporativo.",
+    homeContactWhatsApp: "Contactar por WhatsApp",
+    homeContactEmail: "Enviar Correo Directo",
+    homeFormTitle: "Solicitar Diagnóstico Express",
+    homeFormName: "Nombre y Apellidos",
+    homeFormCompany: "Empresa",
+    homeFormEmail: "Correo Corporativo",
+    homeFormMessage: "¿En qué licitación o proyecto estás trabajando?",
+    homeFormSend: "Enviar Solicitud de Diagnóstico",
+    homeFormSentTitle: "Solicitud enviada con éxito",
+    homeFormSentDesc: "Gracias por contactar. Tatiana Lovric te responderá en breve.",
+
     // Footer
     footerConsultant: "Plataforma desarrollada y asesorada por Tatiana Lovric · Consultoría Estratégica, Sostenibilidad y Gobierno Corporativo.",
     footerStandard: "Estructura de divulgaciones conforme al VSME Standard de EFRAG (Módulo Básico B1–B11, Módulo Completo C1–C9).",
@@ -249,6 +338,95 @@ export const translations = {
     registerSuccessToast: "Company registered successfully",
     registerSuccessToastDesc: "Your dossier has been initialized with isolated security.",
     logoutSuccessToast: "Signed out",
+
+    // Corporate Navigation
+    navHome: "Home",
+    navPassport: "ESG Passport",
+    navServices: "Services",
+    navAbout: "About Me",
+    navContact: "Contact",
+    ctaOpenApp: "Open Passport",
+    ctaRequestAudit: "Book Consultation",
+
+    // Home / Corporate Landing Page
+    homeHeroTag: "Tatiana Lovric · Strategic Advisory & Corporate Governance",
+    homeHeroTitle: "Accredit Your Company's ESG Solvency to Win Tenders and Secure Financing",
+    homeHeroSubtitle:
+      "We guide companies of all sizes to structure, validate, and issue their Sustainability Passport under the European EFRAG VSME Standard. The official dossier to win public and private tenders, qualify for multinational corporate supply chains, and access preferential sustainable bank financing.",
+    homeBtnStart: "Start My ESG Passport",
+    homeBtnDemo: "Explore Live Demo",
+    homeBtnConsult: "Book Consultation with Tatiana",
+    homeTrustStandard: "Official EFRAG VSME Standard",
+    homeTrustSfdr: "Aligned with Banking & SFDR",
+    homeTrustCsrd: "CSRD Directive Readiness",
+    homeTrustProcurement: "Technical Solvency for Tenders",
+
+    // Challenges / Solutions
+    homeWhyTitle: "Why does your company need a Sustainability Passport today?",
+    homeWhySubtitle:
+      "Sustainability demands are no longer theoretical: they decide contract awards and banking terms.",
+    homeCard1Title: "Public & Private Tenders",
+    homeCard1Desc:
+      "Public procurement tenders and multinational purchasing boards mandate environmental, social, and governance compliance to award contracts.",
+    homeCard2Title: "Sustainable Banking & Finance (SFDR)",
+    homeCard2Desc:
+      "Financial institutions evaluate your ESG profile to authorize credit lines, performance bonds, and discounted rates under European sustainable finance taxonomies.",
+    homeCard3Title: "Multinational Supply Chains",
+    homeCard3Desc:
+      "Corporations obligated to report under CSRD cascade requirements to their suppliers; without documented accreditation, you are excluded from authorized vendor lists.",
+
+    // Services
+    homeServicesTitle: "Strategic Advisory Services",
+    homeServicesSubtitle:
+      "Executive and technical guidance to turn sustainability into a tangible competitive edge.",
+    homeSrv1Title: "Full Sustainability Passport Formulation",
+    homeSrv1Desc:
+      "Structured roadmap to collect, calculate, and draft all mandatory (Basic Module B1–B11) and comprehensive (C1–C9) disclosures.",
+    homeSrv2Title: "Express ESG Regulatory Gap Assessment",
+    homeSrv2Desc:
+      "We identify within days which requirements you meet, which are missing, and what audit evidence corporate clients and banks will demand.",
+    homeSrv3Title: "Corporate Governance & Internal Policies",
+    homeSrv3Desc:
+      "Design of ethical codes, anti-corruption policies, gender equality plans, and board governance structures to reach Investment Grade.",
+    homeSrv4Title: "Tender Defense & Bidding Support",
+    homeSrv4Desc:
+      "Documentary review of technical solvency criteria and sustainability memorandums for high-stakes tender submissions.",
+
+    // Stages
+    homeStepsTitle: "A Proven Method in 6 Sequential Stages",
+    homeStepsSubtitle:
+      "From basic corporate profile to Investment Grade dossier with SFDR banking correspondence.",
+    homeStep0: "N0 · Profile & Option: Company details, sector classification, and reporting scope (Basic or Option B).",
+    homeStep1: "N1 · Climate & Energy: Energy consumption and greenhouse gas emissions (Scope 1 and 2).",
+    homeStep2: "N2 · Human Capital: Occupational health, continuous training, and gender pay gap metrics.",
+    homeStep3: "N3 · Business Conduct: Anti-corruption policies, litigation checks, and completion of Basic Module.",
+    homeStep4: "N4 · Action Plans & CAPEX: Quantified targets and verifiable green transition investments.",
+    homeStep5: "N5 · Corporate Governance: Administrative body oversight and SFDR banking correspondence.",
+
+    // About Tatiana
+    homeAboutTitle: "About Tatiana Lovric",
+    homeAboutSubtitle: "Strategic Consultant · Sustainability & Corporate Governance",
+    homeAboutText1:
+      "Specialized in transforming corporate sustainability and European regulatory frameworks (EFRAG VSME, CSRD, SFDR) into practical, commercial competitive advantages.",
+    homeAboutText2:
+      "My approach is neither bureaucratic nor theoretical: I work closely with executive leadership and operational teams so that every data point translates into higher solvency to win tenders, qualify for corporate buyers, and obtain preferential financing.",
+    homeAboutQuote:
+      "«Sustainability is not an aesthetic formality: today it is the filter that decides who wins contracts and who accesses capital.»",
+
+    // Contact
+    homeContactTitle: "Shall we discuss your upcoming tenders or your ESG Passport?",
+    homeContactSubtitle:
+      "Book an initial strategic diagnosis or contact me directly via WhatsApp or corporate email.",
+    homeContactWhatsApp: "Chat on Direct WhatsApp",
+    homeContactEmail: "Send Direct Email",
+    homeFormTitle: "Request Express Assessment",
+    homeFormName: "Full Name & Title",
+    homeFormCompany: "Company",
+    homeFormEmail: "Corporate Email",
+    homeFormMessage: "Tell us about your company, tender, or project",
+    homeFormSend: "Submit Assessment Request",
+    homeFormSentTitle: "Message Sent Successfully",
+    homeFormSentDesc: "Thank you for reaching out. Tatiana Lovric will reply promptly.",
 
     // Footer
     footerConsultant: "Platform developed and advised by Tatiana Lovric · Strategic Advisory, Sustainability & Corporate Governance.",

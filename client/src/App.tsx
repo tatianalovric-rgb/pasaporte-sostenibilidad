@@ -8,6 +8,7 @@ import { AppShell, ThemeProvider } from "@/components/shell";
 import { I18nProvider } from "@/lib/i18n";
 import { AuthProvider } from "@/lib/auth";
 import NotFound from "@/pages/not-found";
+import Home from "@/pages/home";
 import Panel from "@/pages/panel";
 import Nivel from "@/pages/nivel";
 import Informe from "@/pages/informe";
@@ -17,7 +18,8 @@ import AuthPage from "@/pages/auth";
 function AppRouter() {
   return (
     <Switch>
-      <Route path="/" component={Panel} />
+      <Route path="/" component={Home} />
+      <Route path="/pasaporte" component={Panel} />
       <Route path="/nivel/:id" component={Nivel} />
       <Route path="/informe" component={Informe} />
       <Route path="/metodo" component={Metodo} />

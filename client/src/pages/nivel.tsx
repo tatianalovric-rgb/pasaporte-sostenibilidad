@@ -385,7 +385,7 @@ export default function Nivel() {
       <div className="py-20 text-center">
         <p className="text-muted-foreground">{lang === "es" ? "Ese nivel no existe." : "This level does not exist."}</p>
         <Button asChild variant="outline" className="mt-4">
-          <Link href="/">{t("btnBackRoadmap")}</Link>
+          <Link href="/pasaporte">{t("btnBackRoadmap")}</Link>
         </Button>
       </div>
     );
@@ -404,7 +404,7 @@ export default function Nivel() {
             : `First complete ${lockReason(level.id, map)}. Setting targets or responding to banks with unverified data reduces credibility.`}
         </p>
         <Button asChild className="mt-5">
-          <Link href="/">{t("btnBackRoadmap")}</Link>
+          <Link href="/pasaporte">{t("btnBackRoadmap")}</Link>
         </Button>
       </div>
     );
@@ -416,7 +416,7 @@ export default function Nivel() {
   return (
     <div className="space-y-8">
       <div className="space-y-4">
-        <Link href="/" className="inline-flex items-center gap-1.5 text-sm text-muted-foreground hover:text-foreground">
+        <Link href="/pasaporte" className="inline-flex items-center gap-1.5 text-sm text-muted-foreground hover:text-foreground">
           <ArrowLeft className="h-3.5 w-3.5" />
           {t("navRoadmap")}
         </Link>

@@ -7,34 +7,37 @@ import { useI18n, LanguageToggle } from "@/lib/i18n";
 import { useAuth } from "@/lib/auth";
 
 /* ---------- Logo de Tatiana Lovric con fallback SVG ---------- */
-export function Logo({ className = "h-8 w-auto" }: { className?: string }) {
+export function Logo({ className = "h-9 w-auto" }: { className?: string }) {
   const [hasError, setHasError] = useState(false);
 
   if (hasError) {
     return (
-      <svg
-        viewBox="0 0 32 32"
-        fill="none"
-        className={className}
-        aria-label="Tatiana Lovric · Pasaporte de Sostenibilidad"
-        role="img"
-      >
-        <path
-          d="M3 27h5v-5H3zM9.5 27h5v-9h-5zM16 27h5V13h-5zM22.5 27h5V5h-5z"
-          stroke="currentColor"
-          strokeWidth="1.8"
-          strokeLinejoin="round"
-        />
-        <path d="M2 30h28" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
-      </svg>
+      <div className="flex items-center gap-2 text-primary font-bold tracking-tight">
+        <svg
+          viewBox="0 0 32 32"
+          fill="none"
+          className="h-7 w-7 text-primary"
+          aria-label="Tatiana Lovric"
+          role="img"
+        >
+          <path
+            d="M3 27h5v-5H3zM9.5 27h5v-9h-5zM16 27h5V13h-5zM22.5 27h5V5h-5z"
+            stroke="currentColor"
+            strokeWidth="1.8"
+            strokeLinejoin="round"
+          />
+          <path d="M2 30h28" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+        </svg>
+        <span className="font-display uppercase tracking-wider text-sm font-extrabold">Tatiana Lovric</span>
+      </div>
     );
   }
 
   return (
     <img
       src="/logo-tatiana-lovric.png"
-      alt="Tatiana Lovric"
-      className={cn("h-9 w-auto max-w-[125px] object-contain rounded transition-transform", className)}
+      alt="Tatiana Lovric · Consultoría Estratégica"
+      className={cn("h-10 w-auto max-w-[170px] object-contain rounded transition-transform", className)}
       onError={() => setHasError(true)}
     />
   );
@@ -76,8 +79,9 @@ export function AppShell({ children }: { children: ReactNode }) {
   const { user, logout, isConsultant, companies, activeCompanyId, setActiveCompanyId } = useAuth();
 
   const NAV = [
-    { href: "/", label: t("navRoadmap"), icon: LayoutList },
-    { href: "/informe", label: t("navReport"), icon: FileText },
+    { href: "/", label: t("navHome"), icon: LayoutList },
+    { href: "/pasaporte", label: t("navPassport"), icon: FileText },
+    { href: "/informe", label: t("navReport"), icon: Award },
     { href: "/metodo", label: t("navMethod"), icon: Compass },
   ];
 
@@ -86,7 +90,7 @@ export function AppShell({ children }: { children: ReactNode }) {
       <header className="sticky top-0 z-40 border-b border-border bg-background/90 backdrop-blur-md shadow-xs">
         <div className="mx-auto flex h-16 max-w-6xl items-center justify-between gap-4 px-4 sm:px-6">
           <Link href="/" className="flex items-center gap-3 group text-primary" data-testid="link-home">
-            <Logo className="h-9 w-auto shadow-2xs group-hover:opacity-90" />
+            <Logo className="h-10 w-auto shadow-2xs group-hover:opacity-90" />
             <div className="flex flex-col text-left">
               <span className="font-display text-sm font-extrabold uppercase tracking-[0.08em] text-foreground leading-tight">
                 {t("brandTitle").split(" ")[0]} <span className="text-primary">{t("brandTitle").split(" ").slice(1).join(" ")}</span>
@@ -99,7 +103,12 @@ export function AppShell({ children }: { children: ReactNode }) {
 
           <nav className="hidden items-center gap-1.5 md:flex">
             {NAV.map(({ href, label, icon: Icon }) => {
-              const active = href === "/" ? location === "/" || location.startsWith("/nivel") : location.startsWith(href);
+              const active =
+                href === "/"
+                  ? location === "/"
+                  : href === "/pasaporte"
+                  ? location === "/pasaporte" || location.startsWith("/nivel")
+                  : location.startsWith(href);
               return (
                 <Link
                   key={href}
@@ -120,6 +129,18 @@ export function AppShell({ children }: { children: ReactNode }) {
           </nav>
 
           <div className="flex items-center gap-2">
+            {/* CTA Directo a la herramienta cuando está en Home */}
+            {location === "/" && (
+              <Link href="/pasaporte">
+                <Button
+                  size="sm"
+                  className="hidden xl:flex items-center gap-1.5 font-bold text-xs bg-primary hover:bg-primary/90 text-primary-foreground shadow-xs"
+                >
+                  <FileText className="h-3.5 w-3.5" />
+                  <span>{t("ctaOpenApp")}</span>
+                </Button>
+              </Link>
+            )}
             {/* Consultant: Selector de Empresas registradas */}
             {isConsultant && companies.length > 0 && (
               <div className="hidden lg:flex items-center gap-1.5 bg-muted/60 px-2.5 py-1 rounded-md border border-border text-xs">
@@ -192,7 +213,12 @@ export function AppShell({ children }: { children: ReactNode }) {
         {/* Mobile Navigation */}
         <nav className="flex gap-1 overflow-x-auto border-t border-border px-4 py-2 md:hidden bg-muted/20">
           {NAV.map(({ href, label, icon: Icon }) => {
-            const active = href === "/" ? location === "/" || location.startsWith("/nivel") : location.startsWith(href);
+            const active =
+              href === "/"
+                ? location === "/"
+                : href === "/pasaporte"
+                ? location === "/pasaporte" || location.startsWith("/nivel")
+                : location.startsWith(href);
             return (
               <Link
                 key={href}
