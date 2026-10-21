@@ -20,9 +20,9 @@ export function Logo({ className = "h-11 w-auto" }: { className?: string }) {
 
   return (
     <img
-      src="/logo-emblem.jpg"
+      src="/logo-oficial.jpg?v=4"
       alt="Tatiana Lovric Global Consulting"
-      className={cn("h-11 w-auto object-contain transition-transform rounded-lg", className)}
+      className={cn("h-11 sm:h-12 w-auto object-contain transition-transform rounded-lg", className)}
       onError={() => setHasError(true)}
     />
   );
@@ -89,7 +89,7 @@ export function AppShell({ children }: { children: ReactNode }) {
           <Link href="/" className="flex items-center gap-3.5 group text-primary" data-testid="link-home">
             <div className="p-1 rounded-xl bg-white shadow-xs group-hover:scale-105 transition-transform flex items-center justify-center">
               <img
-                src="/logo-emblem.jpg"
+                src="/logo-oficial.jpg?v=4"
                 alt="Tatiana Lovric Global Consulting"
                 className="h-11 sm:h-12 w-auto object-contain rounded-lg"
               />

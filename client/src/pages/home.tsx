@@ -77,7 +77,7 @@ export default function Home() {
         <div className="flex flex-col items-center justify-center gap-4">
           <div className="p-4 sm:p-6 rounded-3xl bg-white border border-slate-200/90 shadow-md transition-all hover:shadow-lg max-w-sm sm:max-w-md mx-auto">
             <img
-              src="/logo-global-consulting.jpg"
+              src="/logo-oficial.jpg?v=4"
               alt="Tatiana Lovric Global Consulting · Where Law, Strategy & Global Vision Converge"
               className="w-full h-auto object-contain rounded-2xl"
             />
@@ -433,7 +433,7 @@ export default function Home() {
           <div className="flex justify-center">
             <div className="p-3 rounded-2xl bg-slate-50 border border-slate-200 shadow-2xs">
               <img
-                src="/logo-global-consulting.jpg"
+                src="/logo-oficial.jpg?v=4"
                 alt="Tatiana Lovric Global Consulting"
                 className="w-full max-w-[280px] h-auto object-contain rounded-xl"
               />
