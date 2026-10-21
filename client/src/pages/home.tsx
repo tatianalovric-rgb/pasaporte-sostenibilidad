@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { Link } from "wouter";
 import { useI18n } from "@/lib/i18n";
-import { Logo } from "@/components/shell";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle, CardFooter } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -18,21 +17,17 @@ import {
   Landmark,
   Scale,
   Network,
-  Gauge,
-  Sparkles,
   MessageCircle,
   Mail,
   Calendar,
-  Building2,
+  ExternalLink,
   ChevronRight,
-  TrendingUp,
-  Quote,
-  Clock,
-  ExternalLink
+  Download,
+  Lock
 } from "lucide-react";
 
 export default function Home() {
-  const { t, lang } = useI18n();
+  const { lang } = useI18n();
   const { toast } = useToast();
 
   const [formName, setFormName] = useState("");
@@ -47,8 +42,11 @@ export default function Home() {
     setTimeout(() => {
       setFormSending(false);
       toast({
-        title: t("homeFormSentTitle"),
-        description: t("homeFormSentDesc"),
+        title: lang === "es" ? "Solicitud enviada con éxito" : "Inquiry sent successfully",
+        description:
+          lang === "es"
+            ? "Tatiana Lovric se pondrá en contacto en un plazo máximo de 24 horas laborales."
+            : "Tatiana Lovric will contact you within 24 business hours.",
       });
       setFormName("");
       setFormCompany("");
@@ -65,197 +63,261 @@ export default function Home() {
   );
 
   return (
-    <div className="space-y-24 pb-16">
+    <div className="space-y-28 pb-20">
       {/* ============================================================ */}
-      {/* 1. HERO SECTION PRINCIPAL                                    */}
+      {/* 1. HERO SECTION: LUMINOSO, ELEGANTE Y PROTAGÓNICO           */}
       {/* ============================================================ */}
-      <section className="relative overflow-hidden pt-6 pb-12 sm:pt-10 sm:pb-16 text-center space-y-8">
-        {/* Fondo sutil con resplandor suave */}
-        <div className="absolute inset-0 -z-10 flex items-center justify-center opacity-40 dark:opacity-20 pointer-events-none">
-          <div className="w-[500px] h-[500px] bg-primary/20 blur-[130px] rounded-full" />
+      <section className="relative pt-6 pb-12 sm:pt-14 sm:pb-20 text-center space-y-10">
+        {/* Fondo sutil y puro */}
+        <div className="absolute inset-0 -z-10 flex items-center justify-center opacity-60 pointer-events-none">
+          <div className="w-[600px] h-[350px] bg-slate-100/80 rounded-full blur-3xl" />
         </div>
 
-        {/* Logotipo Oficial en Gran Formato */}
-        <div className="flex flex-col items-center justify-center gap-3">
-          <div className="p-3 rounded-2xl bg-card border border-border/70 shadow-md backdrop-blur-sm transition-transform hover:scale-105 duration-300">
-            <Logo className="h-16 sm:h-20 w-auto max-w-[240px]" />
+        {/* Logotipo Oficial en Gran Formato (Nítido y Protagónico) */}
+        <div className="flex flex-col items-center justify-center gap-4">
+          <div className="p-5 sm:p-6 rounded-3xl bg-white border border-slate-200/90 shadow-sm transition-all hover:shadow-md">
+            <img
+              src="/logo-tatiana-lovric-clean.png"
+              alt="Tatiana Lovric · Consultoría Estratégica"
+              className="h-28 sm:h-36 w-auto object-contain"
+            />
           </div>
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/25 text-xs font-semibold text-primary tracking-wide">
-            <ShieldCheck className="h-3.5 w-3.5" />
-            <span>{t("homeHeroTag")}</span>
+
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-slate-100 text-slate-800 border border-slate-200 text-xs font-semibold tracking-wider uppercase">
+            <ShieldCheck className="h-4 w-4 text-primary" />
+            <span>
+              {lang === "es"
+                ? "Consultoría Estratégica · Sostenibilidad & Buen Gobierno"
+                : "Strategic Advisory · Sustainability & Good Governance"}
+            </span>
           </div>
         </div>
 
-        {/* Titular Principal y Subtítulo */}
-        <div className="max-w-4xl mx-auto space-y-4 px-2">
-          <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-foreground leading-[1.15]">
-            {t("homeHeroTitle")}
+        {/* Titular Principal de Alto Impacto */}
+        <div className="max-w-4xl mx-auto space-y-5 px-4">
+          <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-slate-900 leading-[1.18]">
+            {lang === "es" ? (
+              <>
+                Acredite la sostenibilidad de su empresa para{" "}
+                <span className="text-primary underline decoration-slate-300 underline-offset-8">
+                  ganar licitaciones
+                </span>{" "}
+                y financiación
+              </>
+            ) : (
+              <>
+                Certify your company's sustainability to{" "}
+                <span className="text-primary underline decoration-slate-300 underline-offset-8">
+                  win tenders
+                </span>{" "}
+                and secure financing
+              </>
+            )}
           </h1>
-          <p className="text-base sm:text-lg lg:text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto font-normal">
-            {t("homeHeroSubtitle")}
+          <p className="text-base sm:text-lg lg:text-xl text-slate-600 leading-relaxed max-w-3xl mx-auto font-normal">
+            {lang === "es"
+              ? "Acompañamiento especializado para estructurar y emitir su Pasaporte de Sostenibilidad bajo el estándar europeo oficial EFRAG VSME. El aval definitivo ante comités de contratación pública, banca y grandes corporaciones."
+              : "Specialized advisory to structure and issue your Sustainability Passport under the official European EFRAG VSME standard. The definitive dossier for public procurement tenders, banking, and global supply chains."}
           </p>
         </div>
 
-        {/* Botones de Acción Principales */}
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-2">
+        {/* Botones de Acción Directos y Cómodos */}
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4 px-4">
           <Link href="/pasaporte">
             <Button
               size="lg"
-              className="w-full sm:w-auto bg-primary hover:bg-primary/90 text-primary-foreground font-bold shadow-lg shadow-primary/25 gap-2.5 text-base px-8 py-6 rounded-xl transition-all hover:translate-y-[-2px]"
+              className="w-full sm:w-auto bg-primary hover:bg-primary/95 text-white font-bold text-base px-8 py-6 rounded-xl shadow-md gap-2.5 transition-all hover:-translate-y-0.5"
             >
               <FileText className="h-5 w-5" />
-              <span>{t("homeBtnStart")}</span>
+              <span>{lang === "es" ? "Comenzar Pasaporte Digital" : "Start Digital Passport"}</span>
               <ArrowRight className="h-5 w-5 ml-1" />
             </Button>
           </Link>
 
-          <a href="#contacto">
+          <a
+            href={`https://wa.me/${whatsAppNumber}?text=${whatsAppMessage}`}
+            target="_blank"
+            rel="noreferrer"
+          >
             <Button
               size="lg"
               variant="outline"
-              className="w-full sm:w-auto border-primary/40 hover:bg-primary/10 font-semibold gap-2 text-base px-7 py-6 rounded-xl"
+              className="w-full sm:w-auto border-emerald-600/40 text-emerald-800 hover:bg-emerald-50 hover:text-emerald-900 font-semibold text-base px-7 py-6 rounded-xl gap-2.5 transition-all"
             >
-              <Calendar className="h-5 w-5 text-primary" />
-              <span>{t("homeBtnConsult")}</span>
+              <MessageCircle className="h-5 w-5 text-emerald-600" />
+              <span>{lang === "es" ? "Contactar por WhatsApp" : "Contact via WhatsApp"}</span>
             </Button>
           </a>
 
-          <Link href="/pasaporte">
+          <a href="#contacto">
             <Button
               size="lg"
               variant="ghost"
-              className="w-full sm:w-auto text-muted-foreground hover:text-foreground font-medium gap-1.5 text-sm"
+              className="w-full sm:w-auto text-slate-600 hover:text-slate-900 font-medium text-sm gap-1.5"
             >
-              <Sparkles className="h-4 w-4 text-amber-500" />
-              <span>{t("homeBtnDemo")}</span>
+              <Calendar className="h-4 w-4 text-primary" />
+              <span>{lang === "es" ? "Solicitar Diagnóstico" : "Request Assessment"}</span>
             </Button>
-          </Link>
+          </a>
         </div>
 
-        {/* Barra de Avales y Estándares Oficiales */}
-        <div className="pt-6 border-t border-border/60 max-w-4xl mx-auto">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-3 text-left">
-            <div className="p-3 rounded-lg bg-card/60 border border-border/60 flex items-center gap-2.5">
-              <Scale className="h-5 w-5 text-primary shrink-0" />
-              <span className="text-xs font-semibold text-foreground leading-tight">
-                {t("homeTrustProcurement")}
-              </span>
+        {/* Barra de Avales y Solvencia Normativa */}
+        <div className="pt-10 max-w-5xl mx-auto px-4">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-left">
+            <div className="p-4 rounded-xl bg-white border border-slate-200/90 shadow-2xs flex items-center gap-3">
+              <Scale className="h-6 w-6 text-primary shrink-0" />
+              <div>
+                <span className="text-xs font-bold text-slate-900 block leading-tight">
+                  {lang === "es" ? "Licitaciones Públicas" : "Public Procurement"}
+                </span>
+                <span className="text-[0.7rem] text-slate-500">
+                  {lang === "es" ? "Puntuación en pliegos" : "Technical tender points"}
+                </span>
+              </div>
             </div>
-            <div className="p-3 rounded-lg bg-card/60 border border-border/60 flex items-center gap-2.5">
-              <Landmark className="h-5 w-5 text-primary shrink-0" />
-              <span className="text-xs font-semibold text-foreground leading-tight">
-                {t("homeTrustSfdr")}
-              </span>
+
+            <div className="p-4 rounded-xl bg-white border border-slate-200/90 shadow-2xs flex items-center gap-3">
+              <Landmark className="h-6 w-6 text-primary shrink-0" />
+              <div>
+                <span className="text-xs font-bold text-slate-900 block leading-tight">
+                  {lang === "es" ? "Banca Sostenible" : "Sustainable Banking"}
+                </span>
+                <span className="text-[0.7rem] text-slate-500">
+                  {lang === "es" ? "Alineado a SFDR" : "SFDR compliant"}
+                </span>
+              </div>
             </div>
-            <div className="p-3 rounded-lg bg-card/60 border border-border/60 flex items-center gap-2.5">
-              <Award className="h-5 w-5 text-primary shrink-0" />
-              <span className="text-xs font-semibold text-foreground leading-tight">
-                {t("homeTrustStandard")}
-              </span>
+
+            <div className="p-4 rounded-xl bg-white border border-slate-200/90 shadow-2xs flex items-center gap-3">
+              <Award className="h-6 w-6 text-primary shrink-0" />
+              <div>
+                <span className="text-xs font-bold text-slate-900 block leading-tight">
+                  {lang === "es" ? "Estándar EFRAG" : "EFRAG Standard"}
+                </span>
+                <span className="text-[0.7rem] text-slate-500">
+                  {lang === "es" ? "Marco VSME oficial" : "Official VSME framework"}
+                </span>
+              </div>
             </div>
-            <div className="p-3 rounded-lg bg-card/60 border border-border/60 flex items-center gap-2.5">
-              <ShieldCheck className="h-5 w-5 text-primary shrink-0" />
-              <span className="text-xs font-semibold text-foreground leading-tight">
-                {t("homeTrustCsrd")}
-              </span>
+
+            <div className="p-4 rounded-xl bg-white border border-slate-200/90 shadow-2xs flex items-center gap-3">
+              <ShieldCheck className="h-6 w-6 text-primary shrink-0" />
+              <div>
+                <span className="text-xs font-bold text-slate-900 block leading-tight">
+                  {lang === "es" ? "Directiva CSRD" : "CSRD Directive"}
+                </span>
+                <span className="text-[0.7rem] text-slate-500">
+                  {lang === "es" ? "Cadena de suministro" : "Supply chain ready"}
+                </span>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
       {/* ============================================================ */}
-      {/* 2. LOS 3 RETOS DE LAS EMPRESAS Y CÓMO LOS RESOLVEMOS         */}
+      {/* 2. LOS 3 RETOS DE NEGOCIO (ESPACIOSO Y ELEGANTE)              */}
       {/* ============================================================ */}
-      <section className="space-y-10">
-        <div className="text-center space-y-3 max-w-3xl mx-auto">
-          <Badge variant="secondary" className="font-mono text-xs uppercase tracking-wider text-primary bg-primary/10">
-            {lang === "es" ? "Impacto en Negocio Real" : "Real Business Impact"}
+      <section className="space-y-12">
+        <div className="text-center space-y-4 max-w-3xl mx-auto px-4">
+          <Badge variant="secondary" className="font-mono text-xs uppercase tracking-wider text-primary bg-primary/10 px-3 py-1">
+            {lang === "es" ? "Retorno de Inversión y Ventaja Competitiva" : "ROI & Competitive Advantage"}
           </Badge>
-          <h2 className="text-2xl sm:text-4xl font-extrabold tracking-tight text-foreground">
-            {t("homeWhyTitle")}
+          <h2 className="text-2xl sm:text-4xl font-extrabold tracking-tight text-slate-900">
+            {lang === "es"
+              ? "¿Por qué su empresa necesita el Pasaporte de Sostenibilidad hoy?"
+              : "Why does your company need a Sustainability Passport today?"}
           </h2>
-          <p className="text-muted-foreground text-sm sm:text-base leading-relaxed">
-            {t("homeWhySubtitle")}
+          <p className="text-slate-600 text-base leading-relaxed">
+            {lang === "es"
+              ? "Las exigencias de sostenibilidad han dejado de ser teóricas: deciden directamente la adjudicación de contratos millonarios y el acceso al crédito bancario."
+              : "Sustainability criteria are no longer theoretical: they directly decide multi-million contracts and bank credit approvals."}
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-3 gap-8">
           {/* Tarjeta 1: Licitaciones */}
-          <Card className="border-border/80 shadow-md bg-card/70 backdrop-blur-sm flex flex-col hover:border-primary/50 transition-all hover:-translate-y-1">
-            <CardHeader className="space-y-3 pb-3">
-              <div className="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center">
-                <Scale className="h-6 w-6" />
+          <Card className="border border-slate-200 bg-white shadow-sm hover:shadow-md transition-all rounded-2xl flex flex-col p-2">
+            <CardHeader className="space-y-4 pb-4">
+              <div className="w-14 h-14 rounded-2xl bg-blue-50 text-primary flex items-center justify-center">
+                <Scale className="h-7 w-7" />
               </div>
-              <CardTitle className="text-xl font-bold">
-                {t("homeCard1Title")}
+              <CardTitle className="text-xl font-bold text-slate-900">
+                {lang === "es" ? "Licitaciones y Contratación Pública" : "Public Procurement & Tenders"}
               </CardTitle>
             </CardHeader>
-            <CardContent className="space-y-4 text-sm text-muted-foreground flex-1">
+            <CardContent className="space-y-5 text-sm text-slate-600 flex-1">
               <p className="leading-relaxed">
-                {t("homeCard1Desc")}
+                {lang === "es"
+                  ? "Los nuevos pliegos de contratación pública premian con puntuación técnica determinante a las empresas que acreditan solvencia ESG con métricas auditables."
+                  : "Public tender boards award decisive technical points to businesses proving ESG solvency with verifiable metrics."}
               </p>
-              <ul className="space-y-2 pt-2 border-t border-border/60 text-xs font-medium text-foreground">
-                <li className="flex items-center gap-2">
-                  <CheckCircle2 className="h-4 w-4 text-emerald-600 shrink-0" />
-                  <span>{lang === "es" ? "Puntuación técnica en pliegos" : "Technical scoring on tenders"}</span>
+              <ul className="space-y-3 pt-3 border-t border-slate-100 text-xs font-medium text-slate-800">
+                <li className="flex items-start gap-2.5">
+                  <CheckCircle2 className="h-4 w-4 text-emerald-600 shrink-0 mt-0.5" />
+                  <span>{lang === "es" ? "Puntuación técnica en pliegos oficiales" : "Technical scoring on procurement bids"}</span>
                 </li>
-                <li className="flex items-center gap-2">
-                  <CheckCircle2 className="h-4 w-4 text-emerald-600 shrink-0" />
-                  <span>{lang === "es" ? "Evidencias documentales válidas" : "Valid audit-ready documentation"}</span>
+                <li className="flex items-start gap-2.5">
+                  <CheckCircle2 className="h-4 w-4 text-emerald-600 shrink-0 mt-0.5" />
+                  <span>{lang === "es" ? "Expediente documental sin riesgo de exclusión" : "Audit-ready evidence eliminating tender rejection"}</span>
                 </li>
               </ul>
             </CardContent>
           </Card>
 
           {/* Tarjeta 2: Banca SFDR */}
-          <Card className="border-border/80 shadow-md bg-card/70 backdrop-blur-sm flex flex-col hover:border-primary/50 transition-all hover:-translate-y-1">
-            <CardHeader className="space-y-3 pb-3">
-              <div className="w-12 h-12 rounded-xl bg-emerald-500/10 text-emerald-600 flex items-center justify-center">
-                <Landmark className="h-6 w-6" />
+          <Card className="border border-slate-200 bg-white shadow-sm hover:shadow-md transition-all rounded-2xl flex flex-col p-2">
+            <CardHeader className="space-y-4 pb-4">
+              <div className="w-14 h-14 rounded-2xl bg-emerald-50 text-emerald-700 flex items-center justify-center">
+                <Landmark className="h-7 w-7" />
               </div>
-              <CardTitle className="text-xl font-bold">
-                {t("homeCard2Title")}
+              <CardTitle className="text-xl font-bold text-slate-900">
+                {lang === "es" ? "Banca y Financiación Sostenible (SFDR)" : "Banking & Sustainable Finance (SFDR)"}
               </CardTitle>
             </CardHeader>
-            <CardContent className="space-y-4 text-sm text-muted-foreground flex-1">
+            <CardContent className="space-y-5 text-sm text-slate-600 flex-1">
               <p className="leading-relaxed">
-                {t("homeCard2Desc")}
+                {lang === "es"
+                  ? "Bajo la normativa europea SFDR, las entidades bancarias requieren indicadores ESG certificados para autorizar préstamos verdes y conceder tipos bonificados."
+                  : "Under European SFDR rules, banks require certified ESG metrics to authorize green loans and grant preferential interest rates."}
               </p>
-              <ul className="space-y-2 pt-2 border-t border-border/60 text-xs font-medium text-foreground">
-                <li className="flex items-center gap-2">
-                  <CheckCircle2 className="h-4 w-4 text-emerald-600 shrink-0" />
-                  <span>{lang === "es" ? "Créditos con tipo de interés bonificado" : "Discounted green loan rates"}</span>
+              <ul className="space-y-3 pt-3 border-t border-slate-100 text-xs font-medium text-slate-800">
+                <li className="flex items-start gap-2.5">
+                  <CheckCircle2 className="h-4 w-4 text-emerald-600 shrink-0 mt-0.5" />
+                  <span>{lang === "es" ? "Tipos de interés bonificados en préstamos" : "Discounted interest rates on corporate loans"}</span>
                 </li>
-                <li className="flex items-center gap-2">
-                  <CheckCircle2 className="h-4 w-4 text-emerald-600 shrink-0" />
-                  <span>{lang === "es" ? "Líneas de avales y pólizas de riesgo" : "Performance bonds & risk policies"}</span>
+                <li className="flex items-start gap-2.5">
+                  <CheckCircle2 className="h-4 w-4 text-emerald-600 shrink-0 mt-0.5" />
+                  <span>{lang === "es" ? "Líneas de crédito y avales preferentes" : "Preferential performance bonds & credit lines"}</span>
                 </li>
               </ul>
             </CardContent>
           </Card>
 
-          {/* Tarjeta 3: Cadenas de Valor */}
-          <Card className="border-border/80 shadow-md bg-card/70 backdrop-blur-sm flex flex-col hover:border-primary/50 transition-all hover:-translate-y-1">
-            <CardHeader className="space-y-3 pb-3">
-              <div className="w-12 h-12 rounded-xl bg-amber-500/10 text-amber-600 flex items-center justify-center">
-                <Network className="h-6 w-6" />
+          {/* Tarjeta 3: Cadenas de Suministro CSRD */}
+          <Card className="border border-slate-200 bg-white shadow-sm hover:shadow-md transition-all rounded-2xl flex flex-col p-2">
+            <CardHeader className="space-y-4 pb-4">
+              <div className="w-14 h-14 rounded-2xl bg-amber-50 text-amber-700 flex items-center justify-center">
+                <Network className="h-7 w-7" />
               </div>
-              <CardTitle className="text-xl font-bold">
-                {t("homeCard3Title")}
+              <CardTitle className="text-xl font-bold text-slate-900">
+                {lang === "es" ? "Cadenas de Valor de Grandes Clientes" : "Supply Chains of Global Buyers"}
               </CardTitle>
             </CardHeader>
-            <CardContent className="space-y-4 text-sm text-muted-foreground flex-1">
+            <CardContent className="space-y-5 text-sm text-slate-600 flex-1">
               <p className="leading-relaxed">
-                {t("homeCard3Desc")}
+                {lang === "es"
+                  ? "Las multinacionales sujetas a la directiva CSRD deben auditar a sus proveedores. Estar preparado evita la sustitución y garantiza contratos plurianuales."
+                  : "Multinationals subject to CSRD must audit their supply tier. Being certified prevents substitution and secures multi-year vendor contracts."}
               </p>
-              <ul className="space-y-2 pt-2 border-t border-border/60 text-xs font-medium text-foreground">
-                <li className="flex items-center gap-2">
-                  <CheckCircle2 className="h-4 w-4 text-emerald-600 shrink-0" />
-                  <span>{lang === "es" ? "Homologación ante multinacionales" : "Qualification for global buyers"}</span>
+              <ul className="space-y-3 pt-3 border-t border-slate-100 text-xs font-medium text-slate-800">
+                <li className="flex items-start gap-2.5">
+                  <CheckCircle2 className="h-4 w-4 text-emerald-600 shrink-0 mt-0.5" />
+                  <span>{lang === "es" ? "Homologación rápida ante comités de compras" : "Fast-track vendor approval in procurement audits"}</span>
                 </li>
-                <li className="flex items-center gap-2">
-                  <CheckCircle2 className="h-4 w-4 text-emerald-600 shrink-0" />
-                  <span>{lang === "es" ? "Cumplimiento cascada CSRD" : "CSRD cascade compliance"}</span>
+                <li className="flex items-start gap-2.5">
+                  <CheckCircle2 className="h-4 w-4 text-emerald-600 shrink-0 mt-0.5" />
+                  <span>{lang === "es" ? "Cumplimiento en cascada sin fricciones" : "Seamless CSRD supply-chain compliance"}</span>
                 </li>
               </ul>
             </CardContent>
@@ -264,235 +326,189 @@ export default function Home() {
       </section>
 
       {/* ============================================================ */}
-      {/* 3. SERVICIOS DE CONSULTORÍA ESTRATÉGICA                      */}
+      {/* 3. SHOWCASE DE LA HERRAMIENTA INTERACTIVA                   */}
       {/* ============================================================ */}
-      <section className="space-y-10" id="servicios">
-        <div className="text-center space-y-3 max-w-3xl mx-auto">
-          <Badge variant="secondary" className="font-mono text-xs uppercase tracking-wider text-primary bg-primary/10">
-            {lang === "es" ? "Asesoramiento Directivo" : "Executive Advisory"}
+      <section className="p-8 sm:p-14 rounded-3xl bg-slate-50 border border-slate-200/90 space-y-10">
+        <div className="text-center space-y-4 max-w-3xl mx-auto">
+          <Badge variant="outline" className="font-mono text-xs uppercase tracking-wider border-slate-300 text-slate-700 bg-white px-3 py-1">
+            {lang === "es" ? "Herramienta Digital Interactiva" : "Interactive Digital Platform"}
           </Badge>
-          <h2 className="text-2xl sm:text-4xl font-extrabold tracking-tight text-foreground">
-            {t("homeServicesTitle")}
+          <h2 className="text-2xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+            {lang === "es"
+              ? "La Ruta Guiada hacia su Pasaporte de Sostenibilidad"
+              : "The Guided Roadmap to your Sustainability Passport"}
           </h2>
-          <p className="text-muted-foreground text-sm sm:text-base leading-relaxed">
-            {t("homeServicesSubtitle")}
+          <p className="text-slate-600 text-base leading-relaxed">
+            {lang === "es"
+              ? "Diseñado en 6 etapas progresivas según la metodología europea EFRAG VSME. Responda a su propio ritmo, adjunte evidencias y genere automáticamente su Informe Oficial en Word listo para presentar."
+              : "Engineered in 6 progressive stages following European EFRAG VSME standard. Complete at your own pace, attach evidence, and instantly generate your Official Word Dossier."}
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-6">
-          {/* Servicio 1 */}
-          <div className="p-6 rounded-2xl border border-border/80 bg-card hover:border-primary/60 transition-all shadow-sm space-y-4">
-            <div className="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center">
-              <FileText className="h-6 w-6" />
-            </div>
-            <h3 className="text-xl font-bold text-foreground">
-              {t("homeSrv1Title")}
-            </h3>
-            <p className="text-sm text-muted-foreground leading-relaxed">
-              {t("homeSrv1Desc")}
-            </p>
-            <div className="pt-2">
-              <Link href="/pasaporte">
-                <Button variant="ghost" className="px-0 text-primary font-semibold gap-1.5 text-xs hover:bg-transparent hover:underline">
-                  {lang === "es" ? "Comenzar en la herramienta" : "Launch in the tool"}
-                  <ArrowRight className="h-3.5 w-3.5" />
-                </Button>
-              </Link>
-            </div>
-          </div>
-
-          {/* Servicio 2 */}
-          <div className="p-6 rounded-2xl border border-border/80 bg-card hover:border-primary/60 transition-all shadow-sm space-y-4">
-            <div className="w-12 h-12 rounded-xl bg-emerald-500/10 text-emerald-600 flex items-center justify-center">
-              <Gauge className="h-6 w-6" />
-            </div>
-            <h3 className="text-xl font-bold text-foreground">
-              {t("homeSrv2Title")}
-            </h3>
-            <p className="text-sm text-muted-foreground leading-relaxed">
-              {t("homeSrv2Desc")}
-            </p>
-            <div className="pt-2">
-              <a href="#contacto">
-                <Button variant="ghost" className="px-0 text-primary font-semibold gap-1.5 text-xs hover:bg-transparent hover:underline">
-                  {lang === "es" ? "Solicitar diagnóstico" : "Request assessment"}
-                  <ArrowRight className="h-3.5 w-3.5" />
-                </Button>
-              </a>
-            </div>
-          </div>
-
-          {/* Servicio 3 */}
-          <div className="p-6 rounded-2xl border border-border/80 bg-card hover:border-primary/60 transition-all shadow-sm space-y-4">
-            <div className="w-12 h-12 rounded-xl bg-amber-500/10 text-amber-600 flex items-center justify-center">
-              <ShieldCheck className="h-6 w-6" />
-            </div>
-            <h3 className="text-xl font-bold text-foreground">
-              {t("homeSrv3Title")}
-            </h3>
-            <p className="text-sm text-muted-foreground leading-relaxed">
-              {t("homeSrv3Desc")}
-            </p>
-            <div className="pt-2">
-              <a href="#contacto">
-                <Button variant="ghost" className="px-0 text-primary font-semibold gap-1.5 text-xs hover:bg-transparent hover:underline">
-                  {lang === "es" ? "Consultar asesoría de gobierno" : "Inquire about governance"}
-                  <ArrowRight className="h-3.5 w-3.5" />
-                </Button>
-              </a>
-            </div>
-          </div>
-
-          {/* Servicio 4 */}
-          <div className="p-6 rounded-2xl border border-border/80 bg-card hover:border-primary/60 transition-all shadow-sm space-y-4">
-            <div className="w-12 h-12 rounded-xl bg-blue-500/10 text-blue-600 flex items-center justify-center">
-              <Scale className="h-6 w-6" />
-            </div>
-            <h3 className="text-xl font-bold text-foreground">
-              {t("homeSrv4Title")}
-            </h3>
-            <p className="text-sm text-muted-foreground leading-relaxed">
-              {t("homeSrv4Desc")}
-            </p>
-            <div className="pt-2">
-              <a href="#contacto">
-                <Button variant="ghost" className="px-0 text-primary font-semibold gap-1.5 text-xs hover:bg-transparent hover:underline">
-                  {lang === "es" ? "Preparar próxima licitación" : "Prepare upcoming tender"}
-                  <ArrowRight className="h-3.5 w-3.5" />
-                </Button>
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ============================================================ */}
-      {/* 4. RUTA DEL PASAPORTE EN 6 ETAPAS                            */}
-      {/* ============================================================ */}
-      <section className="p-8 sm:p-12 rounded-3xl bg-muted/40 border border-border/80 space-y-8">
-        <div className="text-center space-y-3 max-w-2xl mx-auto">
-          <Badge variant="outline" className="font-mono text-xs uppercase tracking-wider">
-            {lang === "es" ? "Metodología EFRAG VSME" : "EFRAG VSME Methodology"}
-          </Badge>
-          <h2 className="text-2xl sm:text-3xl font-extrabold text-foreground">
-            {t("homeStepsTitle")}
-          </h2>
-          <p className="text-sm text-muted-foreground">
-            {t("homeStepsSubtitle")}
-          </p>
-        </div>
-
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        {/* Módulos de la Ruta (3x2 Limpio) */}
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {[
-            { id: 0, text: t("homeStep0"), badge: "B1" },
-            { id: 1, text: t("homeStep1"), badge: "B2–B7" },
-            { id: 2, text: t("homeStep2"), badge: "B8–B10" },
-            { id: 3, text: t("homeStep3"), badge: "B11 (Cierre Básico)" },
-            { id: 4, text: t("homeStep4"), badge: "C1–C5" },
-            { id: 5, text: t("homeStep5"), badge: "C6–C9 (SFDR)" },
+            {
+              id: 0,
+              title: lang === "es" ? "Nivel 0 · Estructura" : "Level 0 · Structure",
+              code: "B1",
+              desc: lang === "es" ? "Organización, modelo de negocio y gobierno corporativo." : "Organization, business model, and corporate governance."
+            },
+            {
+              id: 1,
+              title: lang === "es" ? "Nivel 1 · Medio Ambiente" : "Level 1 · Environment",
+              code: "B2–B7",
+              desc: lang === "es" ? "Consumo energético, agua, residuos y emisiones operativas." : "Energy consumption, water, waste, and operational emissions."
+            },
+            {
+              id: 2,
+              title: lang === "es" ? "Nivel 2 · Social & Empleo" : "Level 2 · Social & Workforce",
+              code: "B8–B10",
+              desc: lang === "es" ? "Salud laboral, brecha salarial, igualdad y formación." : "Occupational health, wage gap, diversity, and training."
+            },
+            {
+              id: 3,
+              title: lang === "es" ? "Nivel 3 · Conducta Ética" : "Level 3 · Ethical Conduct",
+              code: "B11 (Cierre)",
+              desc: lang === "es" ? "Anticorrupción, cumplimiento legal y proveedores responsables." : "Anti-bribery, legal compliance, and supply chain ethics."
+            },
+            {
+              id: 4,
+              title: lang === "es" ? "Nivel 4 · Clima & Descarbonización" : "Level 4 · Climate & Targets",
+              code: "C1–C5",
+              desc: lang === "es" ? "Planes de transición, reducción de carbono y resiliencia." : "Transition plans, greenhouse reduction, and resilience."
+            },
+            {
+              id: 5,
+              title: lang === "es" ? "Nivel 5 · Banca & SFDR" : "Level 5 · Banking & SFDR",
+              code: "C6–C9 (SFDR)",
+              desc: lang === "es" ? "Riesgos financieros climáticos y taxonomía europea." : "Climate financial risks and European green taxonomy."
+            },
           ].map((step) => (
             <Link key={step.id} href={`/nivel/${step.id}`}>
-              <div className="p-4 rounded-xl bg-card border border-border/70 hover:border-primary transition-all cursor-pointer h-full flex flex-col justify-between group">
-                <div className="space-y-2">
+              <div className="p-6 rounded-2xl bg-white border border-slate-200 hover:border-primary hover:shadow-md transition-all cursor-pointer h-full flex flex-col justify-between group">
+                <div className="space-y-3">
                   <div className="flex items-center justify-between">
-                    <span className="font-bold text-sm text-primary font-mono">
-                      NIVEL {step.id}
+                    <span className="font-bold text-sm text-primary font-mono tracking-wide">
+                      {step.title}
                     </span>
-                    <Badge variant="secondary" className="text-[0.65rem] font-mono">
-                      {step.badge}
+                    <Badge variant="secondary" className="text-[0.65rem] font-mono bg-slate-100 text-slate-700">
+                      {step.code}
                     </Badge>
                   </div>
-                  <p className="text-xs text-muted-foreground leading-relaxed">
-                    {step.text}
+                  <p className="text-xs text-slate-600 leading-relaxed">
+                    {step.desc}
                   </p>
                 </div>
-                <div className="flex items-center text-[0.7rem] text-primary font-semibold gap-1 pt-3 group-hover:translate-x-1 transition-transform">
-                  <span>{lang === "es" ? "Ver requisitos" : "View requirements"}</span>
-                  <ChevronRight className="h-3.5 w-3.5" />
+                <div className="flex items-center text-xs text-primary font-semibold gap-1 pt-4 group-hover:translate-x-1 transition-transform">
+                  <span>{lang === "es" ? "Explorar módulo" : "View module"}</span>
+                  <ChevronRight className="h-4 w-4" />
                 </div>
               </div>
             </Link>
           ))}
         </div>
 
-        <div className="text-center pt-2">
+        {/* Botón Principal a la Aplicación */}
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
           <Link href="/pasaporte">
-            <Button className="gap-2 font-bold px-6 py-5">
+            <Button size="lg" className="bg-primary hover:bg-primary/95 text-white font-bold px-8 py-6 rounded-xl shadow-md gap-2">
+              <FileText className="h-5 w-5" />
               <span>{lang === "es" ? "Abrir el Pasaporte Completo" : "Open Full Passport"}</span>
-              <ArrowRight className="h-4 w-4" />
+              <ArrowRight className="h-5 w-5 ml-1" />
+            </Button>
+          </Link>
+
+          <Link href="/informe">
+            <Button size="lg" variant="outline" className="border-slate-300 text-slate-700 hover:bg-white font-semibold px-6 py-6 rounded-xl gap-2">
+              <Download className="h-5 w-5 text-primary" />
+              <span>{lang === "es" ? "Ver Expediente Oficial Word (.docx)" : "View Word Dossier (.docx)"}</span>
             </Button>
           </Link>
         </div>
       </section>
 
       {/* ============================================================ */}
-      {/* 5. SOBRE TATIANA LOVRIC                                      */}
+      {/* 4. SOBRE TATIANA LOVRIC: PRESENTACIÓN EDITORIAL Y PRESTIGIO  */}
       {/* ============================================================ */}
-      <section className="grid lg:grid-cols-12 gap-8 items-center" id="sobre-mi">
-        {/* Tarjeta de Identidad y Autoridad */}
-        <div className="lg:col-span-5 p-8 rounded-3xl bg-gradient-to-br from-primary/10 via-card to-card border border-primary/20 space-y-6 shadow-md text-center">
+      <section className="grid lg:grid-cols-12 gap-10 items-center" id="sobre-mi">
+        {/* Tarjeta de Identidad */}
+        <div className="lg:col-span-5 p-8 sm:p-10 rounded-3xl bg-white border border-slate-200/90 shadow-sm space-y-6 text-center">
           <div className="flex justify-center">
-            <div className="p-4 rounded-2xl bg-card border border-border shadow-sm">
-              <Logo className="h-20 w-auto max-w-[220px]" />
+            <div className="p-4 rounded-2xl bg-slate-50 border border-slate-200">
+              <img
+                src="/logo-tatiana-lovric-clean.png"
+                alt="Tatiana Lovric"
+                className="h-28 w-auto object-contain"
+              />
             </div>
           </div>
-          <div className="space-y-1">
-            <h3 className="text-2xl font-extrabold text-foreground tracking-tight">
+          <div className="space-y-1.5">
+            <h3 className="text-2xl font-extrabold text-slate-900 tracking-tight">
               Tatiana Lovric
             </h3>
             <p className="text-xs font-semibold text-primary uppercase tracking-wider">
-              {t("homeAboutSubtitle")}
+              {lang === "es"
+                ? "Consultora Estratégica & Gobierno Corporativo"
+                : "Strategic Advisory & Corporate Governance"}
             </p>
           </div>
-          <div className="p-4 rounded-xl bg-muted/60 border border-border text-xs text-muted-foreground italic leading-relaxed text-left">
-            <Quote className="h-4 w-4 text-primary mb-1 inline mr-1" />
-            {t("homeAboutQuote")}
+          <div className="p-5 rounded-2xl bg-slate-50 border border-slate-200/80 text-xs text-slate-600 leading-relaxed text-left italic">
+            "{lang === "es"
+              ? "La sostenibilidad solo genera valor real cuando se integra en la toma de decisiones directiva, en la rentabilidad de las ofertas comerciales y en la confianza con las entidades financieras."
+              : "Sustainability only creates genuine business value when embedded into boardroom governance, commercial pricing power, and financial trust."}"
           </div>
         </div>
 
-        {/* Biografía y Enfoque de Trabajo */}
-        <div className="lg:col-span-7 space-y-5">
-          <div className="space-y-2">
-            <Badge variant="secondary" className="font-mono text-xs uppercase tracking-wider text-primary bg-primary/10">
+        {/* Biografía y Enfoque Directivo */}
+        <div className="lg:col-span-7 space-y-6">
+          <div className="space-y-3">
+            <Badge variant="secondary" className="font-mono text-xs uppercase tracking-wider text-primary bg-primary/10 px-3 py-1">
               {lang === "es" ? "Autoridad & Metodología" : "Authority & Methodology"}
             </Badge>
-            <h2 className="text-2xl sm:text-4xl font-extrabold tracking-tight text-foreground">
-              {t("homeAboutTitle")}
+            <h2 className="text-2xl sm:text-4xl font-extrabold tracking-tight text-slate-900">
+              {lang === "es"
+                ? "Rigor técnico y visión directiva para proteger e impulsar el valor de su compañía"
+                : "Technical rigor and board-level vision to protect and enhance corporate value"}
             </h2>
           </div>
-          <p className="text-base text-muted-foreground leading-relaxed">
-            {t("homeAboutText1")}
+          <p className="text-base text-slate-600 leading-relaxed">
+            {lang === "es"
+              ? "Con amplia trayectoria en gobierno corporativo, cumplimiento legal y dirección estratégica, Tatiana Lovric ayuda a consejos de administración y comités directivos a transformar las crecientes obligaciones regulatorias europeas en una palanca de solvencia y diferenciación en el mercado."
+              : "With a strong track record in corporate governance, legal compliance, and strategic management, Tatiana Lovric guides boards and leadership teams to turn European regulatory mandates into market differentiation."}
           </p>
-          <p className="text-base text-muted-foreground leading-relaxed">
-            {t("homeAboutText2")}
+          <p className="text-base text-slate-600 leading-relaxed">
+            {lang === "es"
+              ? "Cada expediente se aborda con absoluto secreto profesional, rigor en la verificación de evidencias y enfoque pragmático orientado a resultados de negocio tangibles."
+              : "Every case is handled under strict professional confidentiality, rigorous audit-ready verification, and a pragmatic focus on tangible business results."}
           </p>
 
-          <div className="grid sm:grid-cols-3 gap-4 pt-2">
-            <div className="p-4 rounded-xl bg-card border border-border/80 space-y-1">
-              <span className="text-primary font-bold text-lg font-mono">100%</span>
-              <p className="text-xs font-semibold text-foreground">
+          <div className="grid sm:grid-cols-3 gap-4 pt-3">
+            <div className="p-4 rounded-xl bg-white border border-slate-200 space-y-1 shadow-2xs">
+              <span className="text-primary font-bold text-xl font-mono">100%</span>
+              <p className="text-xs font-semibold text-slate-900">
                 {lang === "es" ? "Alineado a EFRAG" : "EFRAG Aligned"}
               </p>
-              <p className="text-[0.7rem] text-muted-foreground">
-                {lang === "es" ? "Estándar oficial europeo" : "Official European standard"}
+              <p className="text-[0.7rem] text-slate-500">
+                {lang === "es" ? "Estándar oficial UE" : "Official EU standard"}
               </p>
             </div>
-            <div className="p-4 rounded-xl bg-card border border-border/80 space-y-1">
-              <span className="text-emerald-600 font-bold text-lg font-mono">SFDR</span>
-              <p className="text-xs font-semibold text-foreground">
+            <div className="p-4 rounded-xl bg-white border border-slate-200 space-y-1 shadow-2xs">
+              <span className="text-emerald-700 font-bold text-xl font-mono">SFDR</span>
+              <p className="text-xs font-semibold text-slate-900">
                 {lang === "es" ? "Aprobado para Banca" : "Bank Approved"}
               </p>
-              <p className="text-[0.7rem] text-muted-foreground">
-                {lang === "es" ? "Financiación preferente" : "Discounted financing"}
+              <p className="text-[0.7rem] text-slate-500">
+                {lang === "es" ? "Crédito bonificado" : "Discounted credit"}
               </p>
             </div>
-            <div className="p-4 rounded-xl bg-card border border-border/80 space-y-1">
-              <span className="text-amber-600 font-bold text-lg font-mono">Word</span>
-              <p className="text-xs font-semibold text-foreground">
+            <div className="p-4 rounded-xl bg-white border border-slate-200 space-y-1 shadow-2xs">
+              <span className="text-blue-700 font-bold text-xl font-mono">Word</span>
+              <p className="text-xs font-semibold text-slate-900">
                 {lang === "es" ? "Expediente Emitible" : "Issuable Dossier"}
               </p>
-              <p className="text-[0.7rem] text-muted-foreground">
-                {lang === "es" ? "Listo para licitar" : "Ready for bidding"}
+              <p className="text-[0.7rem] text-slate-500">
+                {lang === "es" ? "Para licitaciones" : "Ready for tenders"}
               </p>
             </div>
           </div>
@@ -500,26 +516,30 @@ export default function Home() {
       </section>
 
       {/* ============================================================ */}
-      {/* 6. CONTACTO DIRECTO & FORMULARIO EXPRESS                     */}
+      {/* 5. CONTACTO DIRECTO: CÓMODO, RÁPIDO Y SIN FRICCIÓN          */}
       {/* ============================================================ */}
       <section className="space-y-10" id="contacto">
-        <div className="text-center space-y-3 max-w-3xl mx-auto">
-          <Badge variant="secondary" className="font-mono text-xs uppercase tracking-wider text-primary bg-primary/10">
-            {lang === "es" ? "Contacto Directo" : "Direct Contact"}
+        <div className="text-center space-y-3 max-w-3xl mx-auto px-4">
+          <Badge variant="secondary" className="font-mono text-xs uppercase tracking-wider text-primary bg-primary/10 px-3 py-1">
+            {lang === "es" ? "Contacto Directo con Tatiana Lovric" : "Direct Contact with Tatiana Lovric"}
           </Badge>
-          <h2 className="text-2xl sm:text-4xl font-extrabold tracking-tight text-foreground">
-            {t("homeContactTitle")}
+          <h2 className="text-2xl sm:text-4xl font-extrabold tracking-tight text-slate-900">
+            {lang === "es"
+              ? "¿Tiene una licitación o consulta estratégica?"
+              : "Have an upcoming tender or strategic inquiry?"}
           </h2>
-          <p className="text-muted-foreground text-sm sm:text-base leading-relaxed">
-            {t("homeContactSubtitle")}
+          <p className="text-slate-600 text-base leading-relaxed">
+            {lang === "es"
+              ? "Elija el canal que le resulte más cómodo. Le responderemos con la máxima agilidad y discreción."
+              : "Choose the channel most convenient for you. We will respond with promptness and discretion."}
           </p>
         </div>
 
         <div className="grid md:grid-cols-12 gap-8 items-start max-w-4xl mx-auto">
-          {/* Canales Directos */}
-          <div className="md:col-span-5 space-y-4">
-            <h3 className="text-base font-bold text-foreground">
-              {lang === "es" ? "Canales Inmediatos" : "Immediate Channels"}
+          {/* Canales Directos Inmediatos */}
+          <div className="md:col-span-5 space-y-5">
+            <h3 className="text-base font-bold text-slate-900">
+              {lang === "es" ? "Atención Inmediata" : "Direct Channels"}
             </h3>
 
             {/* Botón WhatsApp */}
@@ -529,110 +549,122 @@ export default function Home() {
               rel="noreferrer"
               className="block"
             >
-              <div className="p-4 rounded-2xl border border-emerald-500/30 bg-emerald-500/5 hover:bg-emerald-500/10 transition-all flex items-center gap-3 group cursor-pointer shadow-xs">
-                <div className="w-10 h-10 rounded-xl bg-emerald-600 text-white flex items-center justify-center shrink-0">
-                  <MessageCircle className="h-5 w-5" />
+              <div className="p-5 rounded-2xl border border-emerald-500/30 bg-emerald-50/60 hover:bg-emerald-50 transition-all flex items-center gap-4 group cursor-pointer shadow-2xs">
+                <div className="w-12 h-12 rounded-xl bg-emerald-600 text-white flex items-center justify-center shrink-0">
+                  <MessageCircle className="h-6 w-6" />
                 </div>
                 <div className="flex-1">
-                  <div className="text-sm font-bold text-foreground group-hover:text-emerald-700 dark:group-hover:text-emerald-400">
-                    {t("homeContactWhatsApp")}
+                  <div className="text-sm font-bold text-slate-900 group-hover:text-emerald-800">
+                    {lang === "es" ? "WhatsApp Directo" : "Direct WhatsApp"}
                   </div>
-                  <div className="text-xs text-muted-foreground">
-                    {lang === "es" ? "Respuesta ágil para empresas" : "Quick response for companies"}
+                  <div className="text-xs text-slate-500">
+                    {lang === "es" ? "Respuesta ágil para empresas" : "Fast response for companies"}
                   </div>
                 </div>
-                <ExternalLink className="h-4 w-4 text-emerald-600 opacity-60 group-hover:opacity-100" />
+                <ExternalLink className="h-4 w-4 text-emerald-600 opacity-70 group-hover:opacity-100" />
               </div>
             </a>
 
             {/* Botón Correo Electrónico */}
             <a href="mailto:tatiana.lovric@consultoria.es" className="block">
-              <div className="p-4 rounded-2xl border border-primary/30 bg-primary/5 hover:bg-primary/10 transition-all flex items-center gap-3 group cursor-pointer shadow-xs">
-                <div className="w-10 h-10 rounded-xl bg-primary text-primary-foreground flex items-center justify-center shrink-0">
-                  <Mail className="h-5 w-5" />
+              <div className="p-5 rounded-2xl border border-slate-200 bg-white hover:bg-slate-50 transition-all flex items-center gap-4 group cursor-pointer shadow-2xs">
+                <div className="w-12 h-12 rounded-xl bg-primary text-white flex items-center justify-center shrink-0">
+                  <Mail className="h-6 w-6" />
                 </div>
                 <div className="flex-1">
-                  <div className="text-sm font-bold text-foreground group-hover:text-primary">
-                    {t("homeContactEmail")}
+                  <div className="text-sm font-bold text-slate-900 group-hover:text-primary">
+                    {lang === "es" ? "Correo Corporativo" : "Corporate Email"}
                   </div>
-                  <div className="text-xs text-muted-foreground font-mono">
+                  <div className="text-xs text-slate-500 font-mono">
                     tatiana.lovric@consultoria.es
                   </div>
                 </div>
-                <ExternalLink className="h-4 w-4 text-primary opacity-60 group-hover:opacity-100" />
+                <ExternalLink className="h-4 w-4 text-slate-400 group-hover:opacity-100" />
               </div>
             </a>
 
             {/* Garantía de Confidencialidad */}
-            <div className="p-4 rounded-2xl bg-muted/50 border border-border/80 text-xs text-muted-foreground space-y-1">
-              <div className="flex items-center gap-1.5 font-semibold text-foreground">
-                <ShieldCheck className="h-4 w-4 text-primary" />
-                <span>{lang === "es" ? "Confidencialidad Garantizada" : "Confidentiality Guaranteed"}</span>
+            <div className="p-5 rounded-2xl bg-white border border-slate-200 text-xs text-slate-600 space-y-2 shadow-2xs">
+              <div className="flex items-center gap-2 font-bold text-slate-900">
+                <Lock className="h-4 w-4 text-primary" />
+                <span>{lang === "es" ? "Confidencialidad Garantizada" : "Guaranteed Confidentiality"}</span>
               </div>
-              <p>
+              <p className="leading-relaxed">
                 {lang === "es"
-                  ? "Toda la información remitida está amparada por secreto profesional y normas de confidencialidad para licitaciones."
-                  : "All submitted data is covered by professional confidentiality and tender trade-secret protections."}
+                  ? "Toda la información remitida está amparada por secreto profesional y estricta reserva mercantil para procesos de licitación."
+                  : "All information shared is strictly covered by professional privilege and trade-secret confidentiality."}
               </p>
             </div>
           </div>
 
-          {/* Formulario Express */}
+          {/* Formulario Breve y Cómodo */}
           <div className="md:col-span-7">
-            <Card className="border-border shadow-lg bg-card">
-              <CardHeader className="pb-3">
-                <CardTitle className="text-lg">
-                  {t("homeFormTitle")}
+            <Card className="border border-slate-200 shadow-sm bg-white rounded-2xl">
+              <CardHeader className="pb-4">
+                <CardTitle className="text-lg font-bold text-slate-900">
+                  {lang === "es" ? "Solicitar Asesoramiento Personalizado" : "Request Personalized Advisory"}
                 </CardTitle>
-                <CardDescription className="text-xs">
+                <CardDescription className="text-xs text-slate-500">
                   {lang === "es"
-                    ? "Completa los datos para recibir una propuesta adaptada a tu sector."
-                    : "Fill in the details to receive a proposal tailored to your industry."}
+                    ? "Indique brevemente los datos de su empresa y el motivo de su consulta."
+                    : "Enter your company details and the topic of your inquiry."}
                 </CardDescription>
               </CardHeader>
               <form onSubmit={handleFormSubmit}>
                 <CardContent className="space-y-4 pt-1">
                   <div className="space-y-1.5">
-                    <Label htmlFor="c-name" className="text-xs">{t("homeFormName")}</Label>
+                    <Label htmlFor="c-name" className="text-xs font-semibold text-slate-700">
+                      {lang === "es" ? "Nombre y Cargo" : "Name & Position"}
+                    </Label>
                     <Input
                       id="c-name"
                       value={formName}
                       onChange={(e) => setFormName(e.target.value)}
                       placeholder="Ej. Roberto Sánchez · Dir. General"
+                      className="bg-white border-slate-200"
                       required
                     />
                   </div>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                     <div className="space-y-1.5">
-                      <Label htmlFor="c-company" className="text-xs">{t("homeFormCompany")}</Label>
+                      <Label htmlFor="c-company" className="text-xs font-semibold text-slate-700">
+                        {lang === "es" ? "Empresa" : "Company"}
+                      </Label>
                       <Input
                         id="c-company"
                         value={formCompany}
                         onChange={(e) => setFormCompany(e.target.value)}
-                        placeholder="Ej. EcoSoluciones S.L."
+                        placeholder="Ej. Soluciones Industriales S.L."
+                        className="bg-white border-slate-200"
                         required
                       />
                     </div>
                     <div className="space-y-1.5">
-                      <Label htmlFor="c-email" className="text-xs">{t("homeFormEmail")}</Label>
+                      <Label htmlFor="c-email" className="text-xs font-semibold text-slate-700">
+                        {lang === "es" ? "Correo Electrónico" : "Email Address"}
+                      </Label>
                       <Input
                         id="c-email"
                         type="email"
                         value={formEmail}
                         onChange={(e) => setFormEmail(e.target.value)}
                         placeholder="direccion@tuempresa.com"
+                        className="bg-white border-slate-200"
                         required
                       />
                     </div>
                   </div>
                   <div className="space-y-1.5">
-                    <Label htmlFor="c-msg" className="text-xs">{t("homeFormMessage")}</Label>
+                    <Label htmlFor="c-msg" className="text-xs font-semibold text-slate-700">
+                      {lang === "es" ? "Detalle o Pliego de la Consulta" : "Details or Tender Inquiry"}
+                    </Label>
                     <Textarea
                       id="c-msg"
                       rows={3}
                       value={formMessage}
                       onChange={(e) => setFormMessage(e.target.value)}
-                      placeholder="Ej. Necesitamos presentar el expediente de sostenibilidad para un pliego de contratación pública antes del 15 del próximo mes..."
+                      placeholder="Ej. Necesitamos presentar el expediente de sostenibilidad para un concurso de contratación pública el próximo mes..."
+                      className="bg-white border-slate-200"
                       required
                     />
                   </div>
@@ -640,11 +672,13 @@ export default function Home() {
                 <CardFooter className="pt-2">
                   <Button
                     type="submit"
-                    className="w-full font-semibold gap-2 py-5"
+                    className="w-full bg-primary hover:bg-primary/95 text-white font-bold gap-2 py-5 rounded-xl shadow-xs"
                     disabled={formSending}
                   >
                     <Calendar className="h-4 w-4" />
-                    {formSending ? "Enviando..." : t("homeFormSend")}
+                    {formSending
+                      ? (lang === "es" ? "Enviando solicitud..." : "Sending inquiry...")
+                      : (lang === "es" ? "Enviar Consulta Confidencial" : "Submit Confidential Inquiry")}
                   </Button>
                 </CardFooter>
               </form>

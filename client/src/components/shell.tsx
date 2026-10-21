@@ -7,7 +7,7 @@ import { useI18n, LanguageToggle } from "@/lib/i18n";
 import { useAuth } from "@/lib/auth";
 
 /* ---------- Logo de Tatiana Lovric con fallback SVG ---------- */
-export function Logo({ className = "h-9 w-auto" }: { className?: string }) {
+export function Logo({ className = "h-11 w-auto" }: { className?: string }) {
   const [hasError, setHasError] = useState(false);
 
   if (hasError) {
@@ -16,7 +16,7 @@ export function Logo({ className = "h-9 w-auto" }: { className?: string }) {
         <svg
           viewBox="0 0 32 32"
           fill="none"
-          className="h-7 w-7 text-primary"
+          className="h-8 w-8 text-primary"
           aria-label="Tatiana Lovric"
           role="img"
         >
@@ -35,25 +35,37 @@ export function Logo({ className = "h-9 w-auto" }: { className?: string }) {
 
   return (
     <img
-      src="/logo-tatiana-lovric.png"
+      src="/logo-tatiana-lovric-clean.png"
       alt="Tatiana Lovric · Consultoría Estratégica"
-      className={cn("h-10 w-auto max-w-[170px] object-contain rounded transition-transform", className)}
+      className={cn("h-11 w-auto object-contain transition-transform", className)}
       onError={() => setHasError(true)}
     />
   );
 }
 
-/* ---------- Tema ---------- */
+/* ---------- Tema (Siempre Claro por Defecto) ---------- */
 const ThemeCtx = createContext<{ dark: boolean; toggle: () => void }>({ dark: false, toggle: () => {} });
 
 export function ThemeProvider({ children }: { children: ReactNode }) {
-  const [dark, setDark] = useState(
-    () => typeof window !== "undefined" && window.matchMedia("(prefers-color-scheme: dark)").matches
-  );
+  // Por defecto SIEMPRE tema claro luminoso para garantizar la identidad corporativa
+  const [dark, setDark] = useState<boolean>(() => {
+    if (typeof window === "undefined") return false;
+    return localStorage.getItem("theme_mode") === "dark";
+  });
+
   useEffect(() => {
     document.documentElement.classList.toggle("dark", dark);
   }, [dark]);
-  return <ThemeCtx.Provider value={{ dark, toggle: () => setDark((d) => !d) }}>{children}</ThemeCtx.Provider>;
+
+  const toggle = () => {
+    setDark((d) => {
+      const next = !d;
+      localStorage.setItem("theme_mode", next ? "dark" : "light");
+      return next;
+    });
+  };
+
+  return <ThemeCtx.Provider value={{ dark, toggle }}>{children}</ThemeCtx.Provider>;
 }
 
 export function ThemeToggle() {
@@ -86,17 +98,19 @@ export function AppShell({ children }: { children: ReactNode }) {
   ];
 
   return (
-    <div className="min-h-screen bg-background text-foreground flex flex-col">
-      <header className="sticky top-0 z-40 border-b border-border bg-background/90 backdrop-blur-md shadow-xs">
-        <div className="mx-auto flex h-16 max-w-6xl items-center justify-between gap-4 px-4 sm:px-6">
-          <Link href="/" className="flex items-center gap-3 group text-primary" data-testid="link-home">
-            <Logo className="h-10 w-auto shadow-2xs group-hover:opacity-90" />
+    <div className="min-h-screen bg-background text-foreground flex flex-col font-sans">
+      <header className="sticky top-0 z-40 border-b border-border/80 bg-white/95 dark:bg-background/95 backdrop-blur-md shadow-xs">
+        <div className="mx-auto flex h-18 max-w-6xl items-center justify-between gap-4 px-4 sm:px-6">
+          <Link href="/" className="flex items-center gap-3.5 group text-primary" data-testid="link-home">
+            <div className="p-1 rounded-lg bg-white shadow-2xs group-hover:scale-105 transition-transform">
+              <Logo className="h-11 sm:h-12 w-auto" />
+            </div>
             <div className="flex flex-col text-left">
-              <span className="font-display text-sm font-extrabold uppercase tracking-[0.08em] text-foreground leading-tight">
-                {t("brandTitle").split(" ")[0]} <span className="text-primary">{t("brandTitle").split(" ").slice(1).join(" ")}</span>
+              <span className="font-display text-base font-extrabold uppercase tracking-[0.05em] text-foreground leading-tight group-hover:text-primary transition-colors">
+                Tatiana Lovric
               </span>
-              <span className="text-[0.62rem] tracking-wider text-muted-foreground uppercase font-medium">
-                {t("brandSubtitle")}
+              <span className="text-[0.65rem] tracking-wider text-muted-foreground uppercase font-semibold">
+                {lang === "es" ? "Sostenibilidad & Buen Gobierno" : "Sustainability & Governance"}
               </span>
             </div>
           </Link>
@@ -134,7 +148,7 @@ export function AppShell({ children }: { children: ReactNode }) {
               <Link href="/pasaporte">
                 <Button
                   size="sm"
-                  className="hidden xl:flex items-center gap-1.5 font-bold text-xs bg-primary hover:bg-primary/90 text-primary-foreground shadow-xs"
+                  className="hidden md:flex items-center gap-1.5 font-bold text-xs bg-primary hover:bg-primary/90 text-primary-foreground shadow-xs px-3.5 py-1.5 rounded-lg"
                 >
                   <FileText className="h-3.5 w-3.5" />
                   <span>{t("ctaOpenApp")}</span>
